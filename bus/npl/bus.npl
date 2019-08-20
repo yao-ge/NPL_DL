@@ -1,0 +1,120 @@
+/*
+*********************************************************************************
+** Purpose: illustrate bus construct in NPL.
+**
+** Description:
+**   Each functional block in a networking device interacts with its
+**   neighboring blocks by reading or writing one or more buses.
+**   Logically speaking, buses flow through the functional blocks
+**   to form a pipeline. A functional block has the option of modifying
+**   bus fields as they pass through.  For example, Logical Tables,
+**   Functions and Special Functions typically read and write bus fields.
+**   The Parser block takes the packet as input and writes parsed fields
+**   to the bus, while the Editor uses the bus fields to update or create
+**   an output packet.
+**
+**   This program defines a bus, assigns values to the fields in a bus in 
+**   one function and displays them in another function.
+**
+** Topology diagram:
+**
+**                 +------------------+
+**                 |                  |
+**    ingress_port |                  |egress_port
+**      +----------+                  +-----------+
+**                 |                  |
+**                 |                  |
+**                 +------------------+
+**
+** Notes: 
+** Verification method: 
+**   Use the packet contents to populate the fields of a bus and dsiplay them
+**   on Behavior Model console.
+**
+*********************************************************************************
+*
+*/
+
+#include "functions.npl"
+
+
+/*
+ * parser construct
+ */
+
+parser_node start {
+    root_node : 1;
+    next_node ethernet;
+}
+
+parser_node ethernet {
+  extract_fields(ingress_pkt.l2_hdr.l2);
+  switch(latest.ethertype) {
+    0x0800:
+      next_node ipv4;
+
+    default :
+      next_node ingress;
+  }
+}
+
+parser_node ipv4 {
+    extract_fields(ingress_pkt.l3_hdr.ipv4);
+    next_node udp;
+}
+
+parser_node udp {
+	extract_fields(ingress_pkt.l4_hdr.udp);
+	packet_info.job_id = ingress_pkt.l4_hdr.udp.job_id;
+	packet_info.worker_id = ingress_pkt.l4_hdr.udp.worker_id;
+	packet_info.sequence = ingress_pkt.l4_hdr.udp.sequence;
+	packet_info.exp = ingress_pkt.l4_hdr.udp.exp;
+	packet_info.bias = ingress_pkt.l4_hdr.udp.bias;
+	packet_info.bias_exp = ingress_pkt.l4_hdr.udp.bias_exp;
+	next_node ingress;
+}
+
+/*
+parser_node payload {
+	extract_fields(ingress_pkt.payload.pss[0]);
+	if(1024 < ingress_pkt.l4_hdr.udp.length - 8) {
+		next_node payload1;
+	}else{
+		next_node ingress;
+	}
+}
+
+parser_node payload1 {
+	extract_fields(ingress_pkt.payload.pss[1]);
+	next_node ingress;
+}
+*/
+parser_node ingress {
+    end_node: 1; 
+}
+
+
+/*************************************
+PROGRAM
+*************************************/
+program bus_example {
+
+    /* INPUT:
+     * BASE_INPUT macro implements standard input from BMI (Behavior Model Infrastructure) to program */
+    BASE_INPUT;
+
+    /* Ingress */
+    parse_begin(start);
+
+    /* MMU: */
+    base_assign_destination();
+    BASE_MMU; /* BASE_MMU macro implements default MMU SpecialFunction*/
+
+    /* Egress */
+    base_egress(); /* destination-port is same as ingress-port */
+
+    /* OUTPUT:
+     * BASE_OUTPUT macro implements standard output to BMI from program */
+    BASE_OUTPUT;
+
+}

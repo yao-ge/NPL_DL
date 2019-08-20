@@ -1,0 +1,260 @@
+/*
+********************************************************************************************
+* Notes:
+*    This file contains additional/helper-code needed for demonstrating NPL constructs.
+*    In this case, "bus" construct
+********************************************************************************************
+*/
+
+#define BASE_INPUT \
+    iarb.usage_mode_create( 0,          \
+            control_id.otpid_enable,    \
+            control_id.ts_enable,       \
+            obj_bus.port_num,           \
+            obj_bus.port_type_cfg,      \
+            time_bus.currenttime        \
+            );                          \
+    iarb.execute()
+
+#define BASE_MMU \
+    mmu.usage_mode_create( 0,           \
+            ccbi.l2_pbm,                \
+            ccbi.l3_pbm,                \
+            ccbe.dst_port               \
+            );                          \
+    mmu.execute()
+
+#define BASE_OUTPUT \
+    edb.usage_mode_create( 0,           \
+            egr_aux_bus.drop_vector,    \
+            egr_obj_bus.dst_modid,      \
+            egr_obj_bus.dst_port        \
+            );                          \
+    edb.execute()
+
+#define PORT_NUM_WIDTH    7
+#define VALUE_BITS 8192
+#define BLOCK_COUNT 2    // BLOCK_COUNT * VALUE_BITS = MAX_PACKET_LENGTH
+#define JOB_SIZE 1
+#define BLOCK_SIZE 4
+#define WORKER_NUM 4
+
+struct l2_t {
+    fields {
+        bit[48]     macda;					/*48 bit width array for destination mac address*/
+        bit[48]     macsa;
+        bit[16]     ethertype;
+    }
+}
+
+struct vlan_t {
+    fields {
+        bit[3]      pcp;
+        bit         cfi;
+        bit[12]     vid;
+        bit[16]     ethertype;
+    }
+}
+
+struct ipv4_t {
+    fields {
+        bit[4]      version;
+        bit[4]      hdr_len;
+        bit[8]      tos;
+        bit[16]     v4_length;
+        bit[16]     id;
+        bit[3]      flags;
+        bit[13]     frag_offset;
+        bit[8]      ttl;
+        bit[8]      protocol;
+        bit[16]     hdr_checksum;
+        bit[32]     sip;
+        bit[32]     dip;
+        varbit[512] option;
+    }
+    header_length_exp  : hdr_len*4;
+}
+
+struct udp_t {
+	fields {
+	    bit[16] sport;
+	    bit[16] dport;
+	    bit[16] length;
+	    bit[16] checksum;
+	    bit[16] job_id;
+	    bit[16] max_worker;
+	    bit[16] worker_id;
+	    bit[16] sequence;
+	    bit[16] exp;
+	    bit[16] bias;
+	    bit[16] bias_exp;
+	}
+}
+
+/*
+struct pss_t {
+	fields {
+		bit[VALUE_BITS] values;
+	}
+}
+
+struct payload_grp_t {
+	fields {
+		pss_t  pss[BLOCK_COUNT];
+	}
+}
+*/
+
+struct l2_hdr_grp_t {
+    fields {
+        l2_t         l2;
+    }
+}
+
+struct l3_hdr_grp_t {
+    fields {
+        ipv4_t         ipv4;
+    }
+}
+
+struct l4_hdr_grp_t {
+	fields {
+		udp_t udp;
+	}
+}
+
+
+struct ingress_pkt_t {
+    fields {
+        l2_hdr_grp_t l2_hdr;
+        l3_hdr_grp_t l3_hdr;
+		l4_hdr_grp_t l4_hdr;
+		/*payload_grp_t payload;*/
+    }
+}
+
+struct egress_pkt_t {
+    fields {
+        l2_hdr_grp_t l2_hdr;
+        l3_hdr_grp_t l3_hdr;
+		l4_hdr_grp_t l4_hdr;
+		/*payload_grp_t payload;*/
+    }
+}
+
+
+packet ingress_pkt_t ingress_pkt;
+packet egress_pkt_t egress_pkt;
+
+
+struct obj_bus_t {
+    fields {
+        bit[2]                  port_type_cfg;
+        bit[PORT_NUM_WIDTH]     port_num;
+        bit[8]                  dst_modid;
+        bit[PORT_NUM_WIDTH]     dst_port;
+    }
+}
+
+
+struct ccbi_t {
+    fields {
+        bit[128] l2_pbm;
+        bit[128] l3_pbm;
+    }
+}
+
+struct ccbe_t {
+    fields {
+        bit[PORT_NUM_WIDTH] dst_port;
+    }
+}
+
+struct control_id_t {
+    fields {
+        bit[4]  otpid_enable;
+        bit     ts_enable;
+    }
+}
+
+struct time_bus_t {
+    fields {
+        bit[16] currenttime;
+    }
+}
+
+struct egr_obj_bus_t {
+    fields {
+        bit[8]              dst_modid;
+        bit[PORT_NUM_WIDTH] dst_port;
+        bit[PORT_NUM_WIDTH] ing_port;
+        bit[16]             ingress_timestamp;
+    }
+}
+
+struct aux_bus_t {
+    fields {
+        bit [16]     drop_vector;
+    }
+}
+
+bus obj_bus_t             obj_bus;
+bus ccbi_t                ccbi;
+bus ccbe_t                ccbe;
+bus control_id_t          control_id;
+bus time_bus_t            time_bus;
+bus egr_obj_bus_t         egr_obj_bus;
+bus aux_bus_t             egr_aux_bus;
+
+// SF definition
+
+special_function iarb {
+
+    usage_mode_create(in const eindex,
+               out bit[4] otpid_enable,
+               out bit[1] ts_enable,
+               out bit[7] port_num,
+               out bit[2] port_type_cfg,
+               out bit[16] currenttime
+               );
+
+    usage_mode_select(in bit[1] eindex);
+
+}
+
+special_function mmu {
+
+    usage_mode_create(in const eindex,
+               in bit[128] l2_pbm,
+               in bit[128] l3_pbm,
+               out bit[7] dst_port
+               );
+
+    usage_mode_select(in bit[1] eindex);
+
+}
+
+
+special_function edb {
+
+    usage_mode_create(in const eindex,
+               in bit[16] drop_vector,
+               in bit[8] dst_mod,
+               in bit[7] dst_port
+               );
+
+    usage_mode_select(in bit[1] eindex);
+
+}
+
+function base_assign_destination() {
+    ccbi.l3_pbm = 0;
+    ccbe.dst_port = 0;
+    ccbi.l2_pbm = 1 << obj_bus.port_num;
+}
+
+function base_egress() {
+    egr_aux_bus.drop_vector = 0;
+    egr_obj_bus.dst_modid = 0;
+    egr_obj_bus.dst_port = obj_bus.port_num;
+}

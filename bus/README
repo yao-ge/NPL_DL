@@ -1,0 +1,57 @@
+
+Description:
+============
+This program illustrates how to use NPL's 'bus' construct and provides sandbox for experimenting.
+
+'bus' program does following:
+  * Defines 'packet_field_bus' which holds source,destination IP addresses of packet.
+  * Parses incoming packet.
+  * Populates 'packet_field_bus' based on incoming packets IP header.
+  * Prints contents of 'packet_field_bus' on BM console.
+
+Contents:
+=========
+bus
+|-- npl
+|   |-- bus.npl           (main program code)
+|   |-- base_helper.npl   (support code that is needed for program to compile & execute)
+|-- config.ini            (configuration file that can be used as-is)
+|-- Makefile              
+|-- bm_tests              (Scripts to support topology, packet crafting, packet send & receive)
+    |-- corp_net
+    |   |-- testPkt.py
+    |-- sf_definition     (Special Function definition to interact with BMI* code)
+        |-- bm_sfc.cpp
+
+
+Compile & Run the program:
+==========================
+To compile 'bus' program, run following commands from program directory:
+   * make fe_nplsim
+   * make nplsim_comp
+At this point, all files needed to run NPL Behavior Model (BM) are generated.
+There are two options to run 'bus' program with NPL BM.
+   1. If xterm is supported, just run: 
+      *   make nplsim_run    (this is simple and easy way to run)
+   2. If xterm is NOT supported then:  (manually running BM components)
+      2a. Open two terminal windows and browse to 'bus' program directory.
+      2b. Terminal-1: Run 'bus' program's Behavior Model:
+          :> source ./ncsc-x.x.x/bin/setup.sh
+          cd <npl_example>  
+          :> ./fe_output/bmodel/bin/bmodel.sim
+      2c. Terminal-2: Run Behavior Model CLI program.
+          :> source ./ncsc-x.x.x/bin/setup.sh
+          cd <npl_example>  
+          :> python $BRCM_NCS_ROOT/ncsc-x.x.x/bmi/cli/bmif_cli.py --regfile ./fe_output/regfiles/nplsim_physical_regsfile.yml
+
+Packet Test:
+============
+Default packet generation script included with the program does following:
+   Input : Send an IP packet to port-0.
+   Output: On Behavior Model console, source & destination IP addresses of packet are printed.
+
+To run the test, open terminal and browse to 'bus' program directory.
+Run the following packet generation script included with the program.
+   :> python bm_tests/corp_net/testPkt.py
+
+*BMI: Behavior Model Infrastructure

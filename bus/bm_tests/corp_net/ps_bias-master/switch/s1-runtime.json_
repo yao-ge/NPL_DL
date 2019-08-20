@@ -1,0 +1,173 @@
+{
+  "target": "bmv2",
+  "p4info": "build/basic.p4info",
+  "bmv2_json": "build/basic.json",
+  "table_entries": [
+    {
+      "table": "MyIngress.bits_table",
+      "default_action": true,
+      "action_name": "MyIngress._drop",
+      "action_params": { }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [1]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "1"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [2]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "3"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [3]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "7"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [4]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "15"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [5]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "31"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [6]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "63"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [7]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "127"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [8]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "255"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [9]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "511"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [10]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "1023"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [11]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "2047"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [12]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "4095"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [13]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "8191"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [14]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "16383"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [15]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "32767"
+      }
+    },
+    {
+      "table": "MyIngress.bits_table",
+      "match": {
+        "meta.ps_metadata.max_worker": [16]
+      },
+      "action_name": "MyIngress.get_exp",
+      "action_params": {
+        "val": "65535"
+      }
+    }
+  ]
+}

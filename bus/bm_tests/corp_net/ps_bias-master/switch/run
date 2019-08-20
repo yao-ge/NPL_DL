@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /home/allreduce-on-switch/bias
+./run.sh 2 $1

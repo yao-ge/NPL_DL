@@ -1,0 +1,256 @@
+NCS_SIGNATURE:
+    CHIP_ID: ''
+    CHIP_REV: ''
+    IDENTIFIER: a69c4d140552eab35f79d98bbfd7b3b6
+    NCS_RUN_DATE_TIME: '2019-08-20 21:31:13.018627'
+    NCS_VERSION: 1.3.3rc4
+    NPL_APP: Default-App
+    NPL_APP_DESCRIPTION: Default Npl Application
+    NPL_APP_VERSION: '0.0'
+TABLE:
+    sfc_edb_profile:
+        DESC: |-
+            Special Function edb Table - sfc_edb_profile
+        FIELDS:
+            _HIT_INDEX0:
+                DESC: |-
+                    HIT INDEX0 metadata
+                MAXBIT: 227
+                MINBIT: 196
+                ORDER: 7
+                TAG: metadata
+                WIDTH: 32
+            _INDEX:
+                DESC: |-
+                    Index
+                MAXBIT: 1
+                MINBIT: 1
+                ORDER: 1
+                TAG: index_
+                WIDTH: 1
+            _LOOKUP0:
+                DESC: |-
+                    LOOKUP0 metadata
+                MAXBIT: 195
+                MINBIT: 195
+                ORDER: 6
+                TAG: metadata
+                WIDTH: 1
+            _VALID:
+                DESC: |-
+                    VALID bit
+                MAXBIT: 0
+                MINBIT: 0
+                ORDER: 0
+                TAG: valid
+                WIDTH: 1
+            edb_index:
+                DESC: |-
+                    Key
+                MAXBIT: 2
+                MINBIT: 2
+                ORDER: 2
+                TAG: key
+                WIDTH: 1
+            in_drop_vector:
+                BUS_SELECT_WIDTH: 16
+                DESC: |-
+                    Input - drop_vector
+                MAXBIT: 66
+                MINBIT: 3
+                ORDER: 3
+                TAG: bus_select
+                WIDTH: 64
+            in_dst_mod:
+                BUS_SELECT_WIDTH: 8
+                DESC: |-
+                    Input - dst_mod
+                MAXBIT: 130
+                MINBIT: 67
+                ORDER: 4
+                TAG: bus_select
+                WIDTH: 64
+            in_dst_port:
+                BUS_SELECT_WIDTH: 7
+                DESC: |-
+                    Input - dst_port
+                MAXBIT: 194
+                MINBIT: 131
+                ORDER: 5
+                TAG: bus_select
+                WIDTH: 64
+        MAX_SIZE: 2
+        MEM_TYPE: table
+        MIN_SIZE: 2
+        OBJ_SOURCE: npl
+        TABLE_TYPE: INDEX
+    sfc_iarb_profile:
+        DESC: |-
+            Special Function iarb Table - sfc_iarb_profile
+        FIELDS:
+            _HIT_INDEX0:
+                DESC: |-
+                    HIT INDEX0 metadata
+                MAXBIT: 355
+                MINBIT: 324
+                ORDER: 9
+                TAG: metadata
+                WIDTH: 32
+            _INDEX:
+                DESC: |-
+                    Index
+                MAXBIT: 1
+                MINBIT: 1
+                ORDER: 1
+                TAG: index_
+                WIDTH: 1
+            _LOOKUP0:
+                DESC: |-
+                    LOOKUP0 metadata
+                MAXBIT: 323
+                MINBIT: 323
+                ORDER: 8
+                TAG: metadata
+                WIDTH: 1
+            _VALID:
+                DESC: |-
+                    VALID bit
+                MAXBIT: 0
+                MINBIT: 0
+                ORDER: 0
+                TAG: valid
+                WIDTH: 1
+            iarb_index:
+                DESC: |-
+                    Key
+                MAXBIT: 2
+                MINBIT: 2
+                ORDER: 2
+                TAG: key
+                WIDTH: 1
+            out_currenttime:
+                BUS_SELECT_WIDTH: 16
+                DESC: |-
+                    Output - currenttime
+                MAXBIT: 322
+                MINBIT: 259
+                ORDER: 7
+                TAG: bus_select
+                WIDTH: 64
+            out_otpid_enable:
+                BUS_SELECT_WIDTH: 4
+                DESC: |-
+                    Output - otpid_enable
+                MAXBIT: 66
+                MINBIT: 3
+                ORDER: 3
+                TAG: bus_select
+                WIDTH: 64
+            out_port_num:
+                BUS_SELECT_WIDTH: 7
+                DESC: |-
+                    Output - port_num
+                MAXBIT: 194
+                MINBIT: 131
+                ORDER: 5
+                TAG: bus_select
+                WIDTH: 64
+            out_port_type_cfg:
+                BUS_SELECT_WIDTH: 2
+                DESC: |-
+                    Output - port_type_cfg
+                MAXBIT: 258
+                MINBIT: 195
+                ORDER: 6
+                TAG: bus_select
+                WIDTH: 64
+            out_ts_enable:
+                BUS_SELECT_WIDTH: 1
+                DESC: |-
+                    Output - ts_enable
+                MAXBIT: 130
+                MINBIT: 67
+                ORDER: 4
+                TAG: bus_select
+                WIDTH: 64
+        MAX_SIZE: 2
+        MEM_TYPE: table
+        MIN_SIZE: 2
+        OBJ_SOURCE: npl
+        TABLE_TYPE: INDEX
+    sfc_mmu_profile:
+        DESC: |-
+            Special Function mmu Table - sfc_mmu_profile
+        FIELDS:
+            _HIT_INDEX0:
+                DESC: |-
+                    HIT INDEX0 metadata
+                MAXBIT: 227
+                MINBIT: 196
+                ORDER: 7
+                TAG: metadata
+                WIDTH: 32
+            _INDEX:
+                DESC: |-
+                    Index
+                MAXBIT: 1
+                MINBIT: 1
+                ORDER: 1
+                TAG: index_
+                WIDTH: 1
+            _LOOKUP0:
+                DESC: |-
+                    LOOKUP0 metadata
+                MAXBIT: 195
+                MINBIT: 195
+                ORDER: 6
+                TAG: metadata
+                WIDTH: 1
+            _VALID:
+                DESC: |-
+                    VALID bit
+                MAXBIT: 0
+                MINBIT: 0
+                ORDER: 0
+                TAG: valid
+                WIDTH: 1
+            in_l2_pbm:
+                BUS_SELECT_WIDTH: 128
+                DESC: |-
+                    Input - l2_pbm
+                MAXBIT: 66
+                MINBIT: 3
+                ORDER: 3
+                TAG: bus_select
+                WIDTH: 64
+            in_l3_pbm:
+                BUS_SELECT_WIDTH: 128
+                DESC: |-
+                    Input - l3_pbm
+                MAXBIT: 130
+                MINBIT: 67
+                ORDER: 4
+                TAG: bus_select
+                WIDTH: 64
+            mmu_index:
+                DESC: |-
+                    Key
+                MAXBIT: 2
+                MINBIT: 2
+                ORDER: 2
+                TAG: key
+                WIDTH: 1
+            out_dst_port:
+                BUS_SELECT_WIDTH: 7
+                DESC: |-
+                    Output - dst_port
+                MAXBIT: 194
+                MINBIT: 131
+                ORDER: 5
+                TAG: bus_select
+                WIDTH: 64
+        MAX_SIZE: 2
+        MEM_TYPE: table
+        MIN_SIZE: 2
+        OBJ_SOURCE: npl
+        TABLE_TYPE: INDEX

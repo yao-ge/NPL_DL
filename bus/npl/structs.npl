@@ -1,0 +1,68 @@
+#include "base_helper.npl"
+
+#define BLOCK_ADDR (packet_info.job_id * BLOCK_SIZE + packet_info.sequence % BLOCK_SIZE)
+#define WORKER_BITS_ADDR BLOCK_ADDR
+#define WORKER_COUNT_ADDR BLOCK_ADDR
+
+#define WORKER_INFO_SAVE_ADDR (packet_info.job_id * BLOCK_SIZE + packet_info.worker_count - 1)
+#define WORKER_INFO_LOAD_ADDR (packet_info.job_id * BLOCK_SIZE + packet_info.worker_count)
+
+#define STR_ADD(a) a##0
+#define INT_PRINT(a) STR_ADD(a)
+
+
+/*
+ * Define a structure with overlays.
+ * overlays allows to reference fields in a struct in more than one way.
+ * overlays are optional.
+ */
+
+
+struct packet_value_t {
+	fields {
+		bit[VALUE_BITS] value;
+	}
+}
+
+struct tmp_t {
+	fields {
+		bit[48] value_48;
+		bit[32] value_32;
+		bit[16] value_16;
+	}
+}
+
+struct index_t {
+	fields {
+		bit[48] value_48;
+		bit[32] value_32;
+		bit[16] value_16;
+	}
+}
+
+struct packet_info_t {
+	fields {
+		bit[16] job_id;
+		bit[16] max_worker;
+		bit[16] worker_id;
+		bit[16] sequence;
+		bit[16] exp;
+		bit[16] bias;
+		bit[16] bias_exp;
+		bit[16] worker_count;
+		bit[16] worker_init_bits;
+		bit[16] worker_bits;
+		bit[16] max_worker_bits;
+		bit[16] reset_worker_bits;
+		packet_value_t masks[BLOCK_COUNT];
+	}
+}
+
+/*
+ * "bus" construct is used to define logical bus.
+ * In this example, fields and overlays defined in 
+ * struct "packet_field_bus_t" makeup the "packet_field_bus".
+ */
+bus packet_info_t packet_info;
+bus tmp_t tmp;
+bus index_t index;

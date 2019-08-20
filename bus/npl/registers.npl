@@ -1,0 +1,106 @@
+#include "structs.npl"
+
+/*
+ * define a register
+ */
+
+logical_register tuple_t {
+	fields {
+		bit[32] data_t = 0;
+	}
+}
+
+/* the packet length is 2048bytes */
+logical_register ps_value {
+	fields {
+		bit[VALUE_BITS] value00 = 0;
+		bit[VALUE_BITS] value01 = 0;
+		bit[VALUE_BITS] value10 = 0;
+		bit[VALUE_BITS] value11 = 0;
+		bit[VALUE_BITS] value20 = 0;
+		bit[VALUE_BITS] value21 = 0;
+		bit[VALUE_BITS] value30 = 0;
+		bit[VALUE_BITS] value31 = 0;
+	}
+}
+
+logical_register ps_exp {
+	fields {
+		bit[16] value0 = 0;
+		bit[16] value1 = 0;
+		bit[16] value2 = 0;
+		bit[16] value3 = 0;
+	}
+}
+
+logical_register ps_bias {
+	fields {
+		bit[16] value0 = 0;
+		bit[16] value1 = 0;
+		bit[16] value2 = 0;
+		bit[16] value3 = 0;
+	}
+}
+
+logical_register ps_bias_exp {
+	fields {
+		bit[16] value0 = 0;
+		bit[16] value1 = 0;
+		bit[16] value2 = 0;
+		bit[16] value3 = 0;
+	}
+}
+
+logical_register ps_worker_init_bits {
+	fields {
+		bit[16] value0 = 0;
+		bit[16] value1 = 0;
+		bit[16] value2 = 0;
+		bit[16] value3 = 0;
+	}
+}
+
+logical_register ps_worker_bits {
+	fields {
+		bit[16] value0 = 0;
+		bit[16] value1 = 0;
+		bit[16] value2 = 0;
+		bit[16] value3 = 0;
+	}
+}
+
+logical_register ps_worker_count {
+	fields {
+		bit[16] value0 = 0;
+		bit[16] value1 = 0;
+		bit[16] value2 = 0;
+		bit[16] value3 = 0;
+	}
+}
+
+logical_register ps_worker_smac {
+	fields {
+		bit[48] value0 = 0;
+		bit[48] value1 = 0;
+		bit[48] value2 = 0;
+		bit[48] value3 = 0;
+	}
+}
+
+logical_register ps_worker_sip {
+	fields {
+		bit[32] value0 = 0;
+		bit[32] value1 = 0;
+		bit[32] value2 = 0;
+		bit[32] value3 = 0;
+	}
+}
+
+logical_register ps_worker_sport {
+	fields {
+		bit[16] value0 = 0;
+		bit[16] value1 = 0;
+		bit[16] value2 = 0;
+		bit[16] value3 = 0;
+	}
+}
