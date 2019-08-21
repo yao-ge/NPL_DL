@@ -163,12 +163,15 @@ int32_t padding_header_to_buf(char *buf, int32_t *pkt_len, int32_t data_len, \
 	udp->max_worker = htons(size);
 	udp->worker_id = htons(rank);
 	udp->sequence = htons(block);
+#if 1
+	//printf("exp:%d, bias:%d, bias exp:%d\n", exp, bias, bias_exp);
 	udp->exp = htons(exp);
 	udp->bias = htons(bias);
 	udp->bias_exp = htons(bias_exp);
 
 //	printf("job id:%04x, max_worker:%04x, worker_id:%04x, sequence:%04x, exp:%04x, bias:%04x, bias_exp:%04x\n",
 //			udp->job_id, udp->max_worker, udp->worker_id, udp->sequence, udp->exp, udp->bias, udp->bias_exp);
+#endif
 	return ret;
 }
 
@@ -259,39 +262,20 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 	int block_len = BLOCK_SIZE/2 + sizeof(short) * 7;
 #else
 	int data_len = BYTES * count ;
-	int block_len = BYTES * BLOCK_SIZE + sizeof(short) * 7;
+	//int block_len = BYTES * BLOCK_SIZE + sizeof(short) * 7;
+	int block_len = BYTES * BLOCK_SIZE;
 #endif
 
 	padding_header_to_buf(buff, &pkt_len, data_len, key, \
 			size, rank, block, *exp, *bias, *bias_exp);
-    //short key_s =  htons((short)key);    
-	//memcpy( buff + pkt_len, (char*)&key_s, 2 );
-    //
-    //short size_s =  htons((short)size);    
-	//memcpy( buff+ pkt_len+2, (char*)&size_s, 2 );
-    //
-    //short rank_s =  htons( (short)rank);    
-	//memcpy( buff+ pkt_len+4, (char*)&rank_s, 2 );
 
-    //short num_s = htons((short)block);
-    //memcpy( buff+ pkt_len+6, (char*)&num_s, 2);
-
-    //short exp_s = htons((short)*exp);
-    //memcpy( buff+ pkt_len+8, (char*)&exp_s, 2);
-
-    //short bias_s = htons((short)*bias);
-    //memcpy( buff+ pkt_len+10, (char*)&bias_s, 2);
-
-    //short bias_exp_s = htons((short)*bias_exp);
-    //memcpy( buff+ pkt_len+12, (char*)&bias_exp_s, 2);
-
-	//if(0 < data_len){
-	//	memcpy( buff+ pkt_len+14, (char*)&data, data_len );
-	//}
+	if(0 < data_len){
+		memcpy( buff+ pkt_len+14, (char*)&data, data_len );
+	}
 	block_len += pkt_len;
 
     //printf("sent block len:%d, data len:%d\n", block_len, data_len);
-    //print_chars(buff, block_len);
+    //print_chars(buff, 128);
     //int n = sendto(sock, buff, block_len, 0, (struct sockaddr *)&sock_addr, sizeof(sock_addr));
 	int n = send(sock, buff, block_len, 0);
 	if (n < 0)
@@ -317,13 +301,13 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 		//printf("received:");
 		//puts(buff);
         short v;
-	    memcpy( (char*)&v, buff+ pkt_len + 16 + 8,  2 );
+	    memcpy( (char*)&v, buff+ pkt_len + 2 + 8,  2 );
         *exp = ntohs(v);
-	    memcpy( (char*)&v, buff+ pkt_len + 16 + 10, 2 );
+	    memcpy( (char*)&v, buff+ pkt_len + 2 + 10, 2 );
         *bias = ntohs(v);
-	    memcpy( (char*)&v, buff+ pkt_len + 16 + 12, 2 );
+	    memcpy( (char*)&v, buff+ pkt_len + 2 + 12, 2 );
         *bias_exp = ntohs(v);
-	    memcpy( (char*)data, buff+ pkt_len + 16 + 14, data_len );
+	    memcpy( (char*)data, buff+ pkt_len + 2 + 14, data_len );
 	}
 	else if (n==0)
 	{

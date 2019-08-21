@@ -1,8 +1,0 @@
-/*
- * SCRIPT GENERATED FILE, DO NOT MODIFY
-*/
-
-#ifndef FLEX_CTR_EGR_FUNC_DECL_H
-#define FLEX_CTR_EGR_FUNC_DECL_H
-
-#endif

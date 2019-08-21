@@ -1,4 +1,4 @@
-cscope 15 $HOME/ncsc-1.3.3rc4/examples/npl_tidbits/constructs/bus/bm_tests/corp_net/ps_bias-master/allreduce -q 0000002931 0000217728
+cscope 15 $HOME/ncsc-1.3.3rc4/examples/npl_tidbits/constructs/bus/bm_tests/corp_net/ps_bias-master/allreduce -q 0000002924 0000217254
 	@allreduce.c
 
 1 
@@ -180,10 +180,6 @@ i
 , 
 size
 );
-
-39 
-	`¥ötf
-("switch_sum\n");
 
 40 
 	`swôch_sum
@@ -833,103 +829,111 @@ uöt16_t
 	mchecksum
 ;
 
-103 }
+103 
+uöt16_t
+ 
+	mjob_id
+;
+
+104 
+uöt16_t
+ 
+	mmax_w‹kî
+;
+
+105 
+uöt16_t
+ 
+	mw‹kî_id
+;
+
+106 
+uöt16_t
+ 
+	m£quí˚
+;
+
+107 
+uöt16_t
+ 
+	mexp
+;
+
+108 
+uöt16_t
+ 
+	mbüs
+;
+
+109 
+uöt16_t
+ 
+	mbüs_exp
+;
+
+110 }
 __©åibuã__
 ((
 __∑cked__
 ));
 
-106 
+113 
 öt32_t
  
-	$∑ddög_hódî_to_buf
+∑ddög_hódî_to_buf
 (*
 buf
-, 
-öt32_t
- *
+, i¡32_à*
 pkt_Àn
 , i¡32_à
 d©a_Àn
+, \
+
+114 
+key
+, 
+size
+, 
+ønk
+, 
+block
+, 
+exp
+, 
+büs
+, 
+büs_exp
 )
 
-108 
+116 
 öt32_t
  
-ªt
+	gªt
  = 0;
 
-110 
+118 
 uöt8_t
  
-Ælmac
+	gÆlmac
 [6] = {0x00, 0x00, 0x00, 0x00, 0x01, 0x01};
 
-111 
+119 
 uöt8_t
  
-dù
+	gdù
 [6] = {0x01, 0x02, 0x03, 0x04};
 
-112 
+120 
 uöt8_t
  
-sù
+	gsù
 [6] = {0x05, 0x06, 0x07, 0x08};
 
-114 
-hódî_t
- *
-hódî
- = (hódî_à*)&
-buf
-[*
-pkt_Àn
-];
-
-115 
-öt32_t
- 
-hódî_Àn
- = (
-hódî_t
-);
-
-116 *
-pkt_Àn
- +
-hódî_Àn
-;
-
-118 
-Ethî_t
- *
-Ethî
- = (Ethî_à*)&
-buf
-[*
-pkt_Àn
-];
-
-119 
-öt32_t
- 
-ëhî_Àn
- = (
-Ethî_t
-);
-
-120 *
-pkt_Àn
- +
-ëhî_Àn
-;
-
 122 
-ùv4_t
+hódî_t
  *
-ùv4
- = (ùv4_t*)&
+	ghódî
+ = (hódî_à*)&
 buf
 [*
 pkt_Àn
@@ -938,22 +942,22 @@ pkt_Àn
 123 
 öt32_t
  
-ùv4_Àn
+	ghódî_Àn
  = (
-ùv4_t
+hódî_t
 );
 
 124 *
-pkt_Àn
+	gpkt_Àn
  +
-ùv4_Àn
+hódî_Àn
 ;
 
 126 
-udp_t
+Ethî_t
  *
-udp
- = (udp_t*)&
+	gEthî
+ = (Ethî_à*)&
 buf
 [*
 pkt_Àn
@@ -962,45 +966,93 @@ pkt_Àn
 127 
 öt32_t
  
-udp_Àn
+	gëhî_Àn
+ = (
+Ethî_t
+);
+
+128 *
+	gpkt_Àn
+ +
+ëhî_Àn
+;
+
+130 
+ùv4_t
+ *
+	gùv4
+ = (ùv4_t*)&
+buf
+[*
+pkt_Àn
+];
+
+131 
+öt32_t
+ 
+	gùv4_Àn
+ = (
+ùv4_t
+);
+
+132 *
+	gpkt_Àn
+ +
+ùv4_Àn
+;
+
+134 
+udp_t
+ *
+	gudp
+ = (udp_t*)&
+buf
+[*
+pkt_Àn
+];
+
+135 
+öt32_t
+ 
+	gudp_Àn
  = (
 udp_t
 );
 
-128 *
-pkt_Àn
+136 *
+	gpkt_Àn
  +
 udp_Àn
 ;
 
-130 
-hódî
+138 
+	ghódî
 ->
-›code
+	g›code
 [3] = 0x0b;
 
-131 
-hódî
+139 
+	ghódî
 ->
-p‹t
+	gp‹t
 [3] = 0;
 
-133 
-hódî
+141 
+	ghódî
 ->
-pkt_Àn
+	gpkt_Àn
  = 
-	`ht⁄l
+ht⁄l
 (2048 + 
 ëhî_Àn
  + 
 ùv4_Àn
  + 
 udp_Àn
- + 14);
+);
 
-136 
-	`mem˝y
+144 
+mem˝y
 (
 Ethî
 ->
@@ -1009,8 +1061,8 @@ dmac
 Ælmac
 , 6);
 
-137 
-	`mem˝y
+145 
+mem˝y
 (
 Ethî
 ->
@@ -1019,105 +1071,175 @@ smac
 Ælmac
 , 6);
 
-138 
-Ethî
+146 
+	gEthî
 ->
-ëh_ty≥
+	gëh_ty≥
  = 0x0008;
 
-141 
-ùv4
+149 
+	gùv4
 ->
-vîsi⁄
+	gvîsi⁄
  = 5;
 
-142 
-ùv4
+150 
+	gùv4
 ->
-hdr_Àn
+	ghdr_Àn
  = 4;
 
-143 
-ùv4
+151 
+	gùv4
 ->
-v4_Àngth
+	gv4_Àngth
  = 
-	`ht⁄s
+ht⁄s
 (20 + 8 + 
 d©a_Àn
 );
 
-144 
-ùv4
+152 
+	gùv4
 ->
-id
+	gid
  = 
-	`ht⁄s
+ht⁄s
 (1);
 
-145 
-ùv4
+153 
+	gùv4
 ->
-âl
+	gâl
  = 64;
 
-146 
-ùv4
+154 
+	gùv4
 ->
-¥Ÿocﬁ
+	g¥Ÿocﬁ
  = 0x11;
 
-147 
-	`mem˝y
+155 
+mem˝y
 (
 ùv4
 ->
 dù
 , dip, 4);
 
-148 
-	`mem˝y
+156 
+mem˝y
 (
 ùv4
 ->
 sù
 , sip, 4);
 
-151 
-udp
+159 
+	gudp
 ->
-•‹t
+	g•‹t
  = 
-	`ht⁄s
+ht⁄s
 (0x35);
 
-152 
-udp
+160 
+	gudp
 ->
-dp‹t
+	gdp‹t
  = 
-	`ht⁄s
+ht⁄s
 (0x35);
 
-153 
-udp
+161 
+	gudp
 ->
-Àngth
+	gÀngth
  = 
-	`ht⁄s
+ht⁄s
 (0x08 + 
 d©a_Àn
 );
 
-155  
-ªt
+162 
+	gudp
+->
+	gjob_id
+ = 
+ht⁄s
+(
+key
+);
+
+163 
+	gudp
+->
+	gmax_w‹kî
+ = 
+ht⁄s
+(
+size
+);
+
+164 
+	gudp
+->
+	gw‹kî_id
+ = 
+ht⁄s
+(
+ønk
+);
+
+165 
+	gudp
+->
+	g£quí˚
+ = 
+ht⁄s
+(
+block
+);
+
+167 
+¥ötf
+("exp:%d, büs:%d, bü†exp:%d\n", 
+exp
+, 
+büs
+, 
+büs_exp
+);
+
+168 
+	gudp
+->
+	gexp
+ = (
+exp
+);
+
+169 
+	gudp
+->
+	gbüs
+ = (
+büs
+);
+
+170 
+	gudp
+->
+	gbüs_exp
+ = (
+büs_exp
+);
+
+175  
+	gªt
 ;
 
-156 
-	}
-}
-
-159 
+179 
 	$¥öt_Êﬂts
 (c⁄° *
 d©a
@@ -1125,17 +1247,17 @@ d©a
 cou¡
 )
 
-161 
+181 
 	`¥ötf
 ("floats: ");
 
-162 
+182 
 i
 =0;ò< 
 cou¡
  ; ++i){
 
-163 
+183 
 	`¥ötf
 ("%.10l‡ ", 
 d©a
@@ -1143,15 +1265,15 @@ d©a
 i
 ]);
 
-165 
+185 
 	`¥ötf
 ("\n");
 
-167 
+187 
 	}
 }
 
-169 
+189 
 	$¥öt_d©a
 (c⁄° 
 d©a_t
@@ -1161,17 +1283,17 @@ d©a
 cou¡
 )
 
-171 
+191 
 	`¥ötf
 ("data: ");
 
-172 
+192 
 i
 =0;ò< 
 cou¡
  ; ++i){
 
-173 
+193 
 	`¥ötf
 ("%Œu ", ()
 d©a
@@ -1179,15 +1301,15 @@ d©a
 i
 ]);
 
-175 
+195 
 	`¥ötf
 ("\n");
 
-177 
+197 
 	}
 }
 
-179 
+199 
 	$¥öt_ch¨s
 (c⁄° *
 d©a
@@ -1195,29 +1317,29 @@ d©a
 cou¡
 )
 
-181 
+201 
 i
 =0;ò< 
 cou¡
  ; ++i){
 
-182 if(
+202 if(
 i
  % 16 == 0 && i != 0){
 
-183 
+203 
 	`¥ötf
 ("\n");
 
-184 }if(
+204 }if(
 i
  % 8 == 0 && i != 0){
 
-185 
+205 
 	`¥ötf
 ("\t");
 
-187 
+207 
 	`¥ötf
 ("%02x ", ()
 d©a
@@ -1225,25 +1347,25 @@ d©a
 i
 ]);
 
-189 
+209 
 	`¥ötf
 ("\n");
 
-191 
+211 
 	}
 }
 
-193 
+213 
 	gsock
  = 0;
 
-194 
+214 
 sockaddr_ö
  
 	gsock_addr
 ;
 
-195 
+215 
 	$sockë_öô
 (c⁄° * 
 ù
@@ -1251,7 +1373,7 @@ sockaddr_ö
 p‹t
 )
 
-198 i‡–(
+218 i‡–(
 sock
  = 
 	`sockë
@@ -1261,15 +1383,15 @@ AF_INET
 SOCK_STREAM
 , 0) ) < 0 )
 
-200 
+220 
 	`≥º‹
 ("socket");
 
-201 
+221 
 	`exô
 (1);
 
-204 
+224 
 sock_addr
 .
 sö_Ámûy
@@ -1277,7 +1399,7 @@ sö_Ámûy
 AF_INET
 ;
 
-205 
+225 
 sock_addr
 .
 sö_p‹t
@@ -1289,7 +1411,7 @@ sö_p‹t
 p‹t
 ));
 
-206 
+226 
 sock_addr
 .
 sö_addr
@@ -1301,7 +1423,7 @@ s_addr
 ù
 );
 
-207 i‡–
+227 i‡–
 sock_addr
 .
 sö_addr
@@ -1311,33 +1433,33 @@ s_addr
 INADDR_NONE
  )
 
-209 
+229 
 	`¥ötf
 ("Incorrect ipáddress!");
 
-210 
+230 
 	`˛o£
 (
 sock
 );
 
-211 
+231 
 	`exô
 (1);
 
-214 
+234 
 timevÆ
  
 tv
 ;
 
-215 
+235 
 tv
 .
 tv_£c
  = 0;
 
-216 
+236 
 tv
 .
 tv_u£c
@@ -1345,7 +1467,7 @@ tv_u£c
 TIMEOUT
 ;
 
-217 
+237 
 	`£tsock›t
 (
 sock
@@ -1357,11 +1479,11 @@ SO_RCVTIMEO
 tv
 , (tv));
 
-219 
+239 
 bªu£addr
  = 1;
 
-220 
+240 
 	`£tsock›t
 (
 sock
@@ -1373,7 +1495,7 @@ SO_REUSEADDR
 bªu£addr
 , ());
 
-222 if((
+242 if((
 	`c⁄√˘
 (
 sock
@@ -1383,29 +1505,29 @@ sockaddr
 sock_addr
 , (sock_addr)) < 0)) {
 
-223 
+243 
 	`¥ötf
 ("socket connect failed\n");
 
-226 
+246 
 	}
 }
 
-228 
+248 
 	$sockë_˛o£
 ()
 
-230 
+250 
 	`˛o£
 (
 sock
 );
 
-231 
+251 
 	}
 }
 
-233 
+253 
 	$£nd_ªcv
 (
 key
@@ -1429,39 +1551,39 @@ büs
 büs_exp
 )
 
-236 
+256 
 buff
 [
 BUF_SIZE
 ] = {0};
 
-237 
+257 
 Àn
  = (
 sock_addr
 );
 
-238 
+258 
 pkt_Àn
  = 0;
 
-240 #i‡
+260 #i‡
 BIT_WIDTH
  == 4
 
-241 
+261 
 d©a_Àn
  = 
 cou¡
 /2 + count%2;
 
-242 
+262 
 block_Àn
  = 
 BLOCK_SIZE
 /2 + () * 7;
 
-244 
+264 
 d©a_Àn
  = 
 BYTES
@@ -1469,7 +1591,7 @@ BYTES
 cou¡
  ;
 
-245 
+265 
 block_Àn
  = 
 BYTES
@@ -1477,7 +1599,7 @@ BYTES
 BLOCK_SIZE
  + () * 7;
 
-248 
+268 
 	`∑ddög_hódî_to_buf
 (
 buff
@@ -1485,165 +1607,47 @@ buff
 pkt_Àn
 , 
 d©a_Àn
-);
-
-249 
-key_s
- = 
-	`ht⁄s
-(()
+, 
 key
-);
+, \
 
-250 
-	`mem˝y
-–
-buff
- + 
-pkt_Àn
-, (*)&
-key_s
-, 2 );
-
-252 
-size_s
- = 
-	`ht⁄s
-(()
+269 
 size
-);
-
-253 
-	`mem˝y
-–
-buff
-+ 
-pkt_Àn
-+2, (*)&
-size_s
-, 2 );
-
-255 
-ønk_s
- = 
-	`ht⁄s
-–()
+, 
 ønk
-);
-
-256 
-	`mem˝y
-–
-buff
-+ 
-pkt_Àn
-+4, (*)&
-ønk_s
-, 2 );
-
-258 
-num_s
- = 
-	`ht⁄s
-(()
+, 
 block
-);
-
-259 
-	`mem˝y
-–
-buff
-+ 
-pkt_Àn
-+6, (*)&
-num_s
-, 2);
-
-261 
-exp_s
- = 
-	`ht⁄s
-(()*
+, *
 exp
-);
-
-262 
-	`mem˝y
-–
-buff
-+ 
-pkt_Àn
-+8, (*)&
-exp_s
-, 2);
-
-264 
-büs_s
- = 
-	`ht⁄s
-(()*
+, *
 büs
-);
-
-265 
-	`mem˝y
-–
-buff
-+ 
-pkt_Àn
-+10, (*)&
-büs_s
-, 2);
-
-267 
-büs_exp_s
- = 
-	`ht⁄s
-(()*
+, *
 büs_exp
 );
 
-268 
-	`mem˝y
-–
-buff
-+ 
-pkt_Àn
-+12, (*)&
-büs_exp_s
-, 2);
-
-270 if(0 < 
+291 if(0 < 
 d©a_Àn
-)
+){
 
-271 
+292 
 	`mem˝y
 –
 buff
 + 
 pkt_Àn
-+14, (*)
++14, (*)&
 d©a
 , 
 d©a_Àn
  );
 
-272 
+294 
 block_Àn
  +
 pkt_Àn
 ;
 
-274 
-	`¥ötf
-("£¡ blockÜí:%d, d©®Àn:%d\n", 
-block_Àn
-, 
-d©a_Àn
-);
-
-277 
+299 
 n
  = 
 	`£nd
@@ -1655,15 +1659,15 @@ buff
 block_Àn
 , 0);
 
-278 i‡(
+300 i‡(
 n
  < 0)
 
-280 
+302 
 	`≥º‹
 ("sendto");
 
-281 
+303 
 	`¥ötf
 ("n:%d, sock:%d\n", 
 n
@@ -1671,11 +1675,11 @@ n
 sock
 );
 
-282 
+304 
 	`exô
 (0);
 
-289 
+311 
 n
  = 
 	`ªcv
@@ -1685,27 +1689,21 @@ sock
 buff
 , 65535, 0);
 
-290 if(
+312 if(
 n
  > 0)
 
-293 
-	`¥ötf
-("ªcv blockÜí:%d\n", 
-n
-);
-
-295 i‡(
+317 i‡(
 n
 >0 && 
 d©a_Àn
  != 0)
 
-300 
+322 
 v
 ;
 
-301 
+323 
 	`mem˝y
 –(*)&
 v
@@ -1715,7 +1713,7 @@ buff
 pkt_Àn
  + 16 + 8, 2 );
 
-302 *
+324 *
 exp
  = 
 	`¡ohs
@@ -1723,7 +1721,7 @@ exp
 v
 );
 
-303 
+325 
 	`mem˝y
 –(*)&
 v
@@ -1733,7 +1731,7 @@ buff
 pkt_Àn
  + 16 + 10, 2 );
 
-304 *
+326 *
 büs
  = 
 	`¡ohs
@@ -1741,7 +1739,7 @@ büs
 v
 );
 
-305 
+327 
 	`mem˝y
 –(*)&
 v
@@ -1751,7 +1749,7 @@ buff
 pkt_Àn
  + 16 + 12, 2 );
 
-306 *
+328 *
 büs_exp
  = 
 	`¡ohs
@@ -1759,7 +1757,7 @@ büs_exp
 v
 );
 
-307 
+329 
 	`mem˝y
 –(*)
 d©a
@@ -1771,27 +1769,27 @@ pkt_Àn
 d©a_Àn
  );
 
-309 i‡(
+331 i‡(
 n
 ==0)
 
-311 
+333 
 	`¥ötf
 ("server closed\n");
 
-315 i‡(
+337 i‡(
 n
  == -1)
 
-317 
+339 
 	`≥º‹
 ("recvfrom send");
 
-323 
+345 
 	}
 }
 
-326 
+348 
 	$block_öt_sum
 (
 key
@@ -1815,7 +1813,7 @@ büs
 büs_exp
 )
 
-331 
+353 
 ªt
  = 
 	`£nd_ªcv
@@ -1839,21 +1837,21 @@ büs
 büs_exp
  );
 
-332 if–
+354 if–
 ªt
  == 0 ) ;
 
-333 
+355 
 	`¥ötf
 ("ªtuª vÆue:%d\n", 
 ªt
 );
 
-338 
+360 
 	}
 }
 
-340 
+362 
 	$block_ª£t
 (
 key
@@ -1863,23 +1861,23 @@ size
 ønk
 )
 
-342 
+364 
 block
  = -1;
 
-343 
+365 
 exp
  = 0;
 
-344 
+366 
 büs
  = 0;
 
-345 
+367 
 büs_exp
  = 0;
 
-348 
+370 
 ªt
  = 
 	`£nd_ªcv
@@ -1901,51 +1899,51 @@ büs
 büs_exp
 );
 
-349 if–
+371 if–
 ªt
  == 0 ) ;
 
-350 
+372 
 block
 --;
 
-352 
+374 
 	}
 }
 
-354 
+376 
 	$¡ohŒ
 (
 vÆ
 )
 
-356  ((()
+378  ((()
 	`ht⁄l
 (()((
 vÆ
  << 32) >> 32))) << 32) | ()htonl(()(val >> 32));
 
-357 
+379 
 	}
 }
 
-359 
+381 
 	$ht⁄Œ
 (
 vÆ
 )
 
-361  ((()
+383  ((()
 	`ht⁄l
 (()((
 vÆ
  << 32) >> 32))) << 32) | ()htonl(()(val >> 32));
 
-362 
+384 
 	}
 }
 
-364 
+386 
 	$xxx
 –c⁄° *
 fmt
@@ -1953,7 +1951,7 @@ fmt
 	}
 }
 
-365 
+387 
 	$xxxx
 (c⁄° 
 d©a_t
@@ -1965,7 +1963,7 @@ cou¡
 	}
 }
 
-366 
+388 
 	$xxxxx
 (c⁄° *
 d©a
@@ -1975,15 +1973,7 @@ cou¡
 	}
 }
 
-367 
-	#¥ötf
- 
-xxx
-
-
-	)
-
-368 
+390 
 	#¥öt_d©a
  
 xxxx
@@ -1991,7 +1981,7 @@ xxxx
 
 	)
 
-369 
+391 
 	#¥öt_Êﬂts
  
 xxxxx
@@ -1999,7 +1989,7 @@ xxxxx
 
 	)
 
-372 
+394 
 	$block_sum
 (
 key
@@ -2021,7 +2011,7 @@ mö
 max
 )
 
-374 
+396 
 d©a_t
  
 tmp
@@ -2029,7 +2019,7 @@ tmp
 BLOCK_SIZE
 ];
 
-375 
+397 
 d©a_t
  
 tmp_x
@@ -2037,7 +2027,7 @@ tmp_x
 BLOCK_SIZE
 ];
 
-377 
+399 
 	`¥öt_Êﬂts
 –
 öput
@@ -2045,21 +2035,13 @@ BLOCK_SIZE
 cou¡
 );
 
-381 
+403 
 büs
  = -
 mö
 ;
 
-382 
-	`¥ötf
-("max = %.10l‡ mö = %.10lf\n", 
-max
-, 
-mö
-);
-
-384 
+406 
 exp
  = 
 	`log
@@ -2069,17 +2051,11 @@ max
 mö
 ))/log(2);
 
-385 
+407 
 exp
  = (exp > 16)?16:( (exp < -16)? -16:Éxp );
 
-386 
-	`¥ötf
-–"ex∞%d\n", 
-exp
-);
-
-387 
+409 
 ex∑nd
  = (
 exp
@@ -2089,7 +2065,7 @@ EXPAND
 size
  : ()(()EXPAND >> (-Éxp)) / size ;
 
-389 
+411 
 büs_exp
  = 
 	`log
@@ -2099,17 +2075,11 @@ büs_exp
 büs
 ))/log(2);
 
-390 
+412 
 büs_exp
  = (bias_exp > 16)?16:( (bias_exp < -16)? -16: bias_exp );
 
-391 
-	`¥ötf
-–"büs_ex∞%d\n", 
-büs_exp
-);
-
-392 
+414 
 büs_ex∑nd
  = (
 büs_exp
@@ -2119,15 +2089,7 @@ EXPAND
 size
  : ()(()EXPAND >> (- bias_exp)) / size ;
 
-395 
-	`¥ötf
-–"ex∑nd = %.10l‡ bü†%.10l‡\n", 
-ex∑nd
-, 
-büs
-);
-
-397 
+419 
 büs_x
  = 
 büs
@@ -2135,19 +2097,13 @@ büs
 büs_ex∑nd
 ;
 
-398 
-	`¥ötf
-–"büs_x = %lf\n", 
-büs_x
-);
-
-399 
+421 
 i
  = 0; i < 
 cou¡
 ; ++i){
 
-401 
+423 
 vÆue
  = 
 öput
@@ -2155,7 +2111,7 @@ vÆue
 i
 ];
 
-404 
+426 
 tmp_x
 [
 i
@@ -2169,7 +2125,7 @@ büs
 ex∑nd
  );
 
-405 
+427 
 tmp
 [
 i
@@ -2185,7 +2141,7 @@ büs
 ex∑nd
  ));
 
-415 
+437 
 	`¥öt_d©a
 –
 tmp_x
@@ -2193,13 +2149,13 @@ tmp_x
 cou¡
 );
 
-418 
+440 
 büs_out
  = 
 büs_x
 ;
 
-419 
+441 
 	`block_öt_sum
 (
 key
@@ -2221,23 +2177,13 @@ büs_out
 büs_exp
 );
 
-420 
-	`¥ötf
-–"ex∞%d büs_ouà%d büs_ex∞%d\n", 
-exp
-, 
-büs_out
-, 
-büs_exp
-);
-
-422 
+444 
 i
  = 0; i < 
 cou¡
 ; ++i){
 
-423 
+445 
 tmp_x
 [
 i
@@ -2247,7 +2193,7 @@ i
 tmp
 [i]);
 
-425 
+447 
 	`¥öt_d©a
 –
 tmp_x
@@ -2255,7 +2201,7 @@ tmp_x
 cou¡
 );
 
-427 
+449 
 ex∑nd
  = (
 exp
@@ -2265,7 +2211,7 @@ EXPAND
 size
  : ()(()EXPAND >> (-Éxp)) / size ;
 
-428 
+450 
 büs_ex∑nd
  = (
 büs_exp
@@ -2275,13 +2221,13 @@ EXPAND
 size
  : ()(()EXPAND >> (- bias_exp)) / size ;
 
-431 
+453 
 i
  = 0; i < 
 cou¡
 ; ++i){
 
-433 
+455 
 ouçut
 [
 i
@@ -2297,7 +2243,7 @@ büs_out
 büs_ex∑nd
 );
 
-438 
+460 
 	`¥öt_Êﬂts
 –
 ouçut
@@ -2305,11 +2251,11 @@ ouçut
 cou¡
 );
 
-440 
+462 
 	}
 }
 
-443 
+465 
 	$gë_mö_max
 (c⁄° *
 öput
@@ -2321,25 +2267,25 @@ mö_±r
 max_±r
 ){
 
-444 
+466 
 mö
  = 
 FLT_MAX
 ;
 
-445 
+467 
 max
  = -
 FLT_MAX
 ;
 
-446 
+468 
 i
  = 0; i< 
 cou¡
  ;i++){
 
-447 if–
+469 if–
 öput
 [
 i
@@ -2347,7 +2293,7 @@ i
 mö
  ) min = input[i];
 
-448 if–
+470 if–
 öput
 [
 i
@@ -2355,23 +2301,23 @@ i
 max
  ) max = input[i];
 
-451 *
+473 *
 mö_±r
  = 
 mö
 ;
 
-452 *
+474 *
 max_±r
  = 
 max
 ;
 
-453 
+475 
 	}
 }
 
-458 
+480 
 	$swôch_sum
 (
 key
@@ -2387,15 +2333,11 @@ size
 ønk
 )
 
-460 
+482 
 	`sockë_öô
 ("127.0.0.1","9090");
 
-461 
-	`¥ötf
-("block_reset\n");
-
-462 
+484 
 	`block_ª£t
 (
 key
@@ -2405,21 +2347,17 @@ size
 ønk
 );
 
-463 
-	`¥ötf
-("block_reset done\n");
-
-464 
+486 
 mö
 ,
 max
 ;
 
-466 
+488 
 block
  = 0;
 
-468 
+490 
 i
  = 0; i < 
 cou¡
@@ -2427,7 +2365,7 @@ cou¡
 BLOCK_SIZE
 )
 
-470 if–
+492 if–
 cou¡
  - 
 i
@@ -2435,7 +2373,7 @@ i
 BLOCK_SIZE
 ){
 
-471 
+493 
 	`gë_mö_max
 –
 öput
@@ -2449,7 +2387,7 @@ mö
 max
  );
 
-472 
+494 
 	`block_sum
 (
 key
@@ -2473,7 +2411,7 @@ mö
 max
 );
 
-476 
+498 
 	`gë_mö_max
 –
 öput
@@ -2487,7 +2425,7 @@ mö
 max
  );
 
-477 
+499 
 	`block_sum
 (
 key
@@ -2511,65 +2449,65 @@ mö
 max
 );
 
-480 
+502 
 block
  ++;
 
-483 
+505 
 	`sockë_˛o£
 ();
 
-485 
+507 
 	}
 }
 
-489 
+511 
 	#MAX_THREAD
  4
 
 	)
 
-491 
+513 
 	sblock_öfo
 {
 
-492 
+514 
 	mkey
 ;
 
-493 c⁄° * 
+515 c⁄° * 
 	möput
 ;
 
-494 *
+516 *
 	mouçut
 ;
 
-495 
+517 
 	mcou¡
 ;
 
-496 
+518 
 	mblock
 ;
 
-497 
+519 
 	msize
 ;
 
-498 
+520 
 	mønk
 ;
 
-499 
+521 
 	møã
 ;
 
-500 }
+522 }
 	tblock_öfo_t
 ;
 
-502 
+524 
 ±hªad_t
  
 	gthªad_£nd_ªcv
@@ -2577,7 +2515,7 @@ block
 MAX_THREAD
 ] = {0};
 
-503 
+525 
 block_öfo_t
  
 	gblock_ö
@@ -2585,13 +2523,13 @@ block_öfo_t
 MAX_THREAD
 ];
 
-505 *
+527 *
 	$block_sum_fun
 (*
 ¨g
 )
 
-508 
+530 
 block_öfo_t
  * 
 bl_ö
@@ -2599,7 +2537,7 @@ bl_ö
 ¨g
 ;
 
-520 
+542 
 	`block_sum
 (
 bl_ö
@@ -2621,33 +2559,33 @@ size
 øã
 );
 
-523 
+545 
 	}
 }
 
-525 
+547 
 	$gë_thªad
 (){
 
-527 
+549 
 i
 =0; i<
 MAX_THREAD
 ; i++)
 
-529 if(
+551 if(
 thªad_£nd_ªcv
 [
 i
 ] == 0)  i;
 
-531 
+553 
 i
 =0; i<
 MAX_THREAD
 ; i++)
 
-533 
+555 
 	`±hªad_joö
 (
 thªad_£nd_ªcv
@@ -2657,17 +2595,17 @@ i
 NULL
 );
 
-534 
+556 
 thªad_£nd_ªcv
 [
 i
 ] = 0;
 
-537 
+559 
 	}
 }
 
-539 
+561 
 	$¸óã
 –
 key
@@ -2687,25 +2625,25 @@ size
 øã
 ){
 
-540 
+562 
 îr
 ;
 
-542 
+564 
 thªad_ödex
 ;
 
-543 (
+565 (
 thªad_ödex
  = 
 	`gë_thªad
 ()) == -1)
 
-545 
+567 
 	`u¶ìp
 (1);
 
-548 
+570 
 ödex
  = 
 block
@@ -2713,7 +2651,7 @@ block
 MAX_THREAD
 ;
 
-550 
+572 
 block_ö
 [
 ödex
@@ -2721,7 +2659,7 @@ block_ö
 key
  = key;
 
-551 
+573 
 block_ö
 [
 ödex
@@ -2729,7 +2667,7 @@ block_ö
 öput
  = input;
 
-552 
+574 
 block_ö
 [
 ödex
@@ -2737,7 +2675,7 @@ block_ö
 ouçut
  = output;
 
-553 
+575 
 block_ö
 [
 ödex
@@ -2745,7 +2683,7 @@ block_ö
 cou¡
  = count;
 
-554 
+576 
 block_ö
 [
 ödex
@@ -2753,7 +2691,7 @@ block_ö
 block
  = block;
 
-555 
+577 
 block_ö
 [
 ödex
@@ -2761,7 +2699,7 @@ block_ö
 size
  = size;
 
-556 
+578 
 block_ö
 [
 ödex
@@ -2769,7 +2707,7 @@ block_ö
 ønk
  =Ñank;
 
-557 
+579 
 block_ö
 [
 ödex
@@ -2777,7 +2715,7 @@ block_ö
 øã
  =Ñate;
 
-559 
+581 
 îr
  = 
 	`±hªad_¸óã
@@ -2793,11 +2731,11 @@ block_sum_fun
 block_ö
 [index]);
 
-560 if(
+582 if(
 îr
  != 0) {
 
-561 
+583 
 	`¥ötf
 ("¸óãÅhªadÉº‹: %s\n",
 	`°ªº‹
@@ -2805,11 +2743,11 @@ block_ö
 îr
 ));
 
-565 
+587 
 	}
 }
 
-566 
+588 
 	$swôch_sum
 (
 key
@@ -2825,11 +2763,11 @@ size
 ønk
 )
 
-568 
+590 
 	`sockë_öô
 ("10.0.2.2","1111");
 
-569 
+591 
 	`block_ª£t
 (
 key
@@ -2839,7 +2777,7 @@ size
 ønk
 );
 
-570 
+592 
 øã
  = 
 	`gë_mö_max
@@ -2849,11 +2787,11 @@ size
 cou¡
 );
 
-571 
+593 
 block
  = 0;
 
-572 
+594 
 i
  = 0; i < 
 cou¡
@@ -2861,7 +2799,7 @@ cou¡
 BLOCK_SIZE
 )
 
-574 if–
+596 if–
 cou¡
  - 
 i
@@ -2869,7 +2807,7 @@ i
 BLOCK_SIZE
 ){
 
-575 
+597 
 	`¸óã
 (
 key
@@ -2891,7 +2829,7 @@ size
 øã
 );
 
-578 
+600 
 	`¸óã
 (
 key
@@ -2913,23 +2851,23 @@ size
 øã
 );
 
-580 
+602 
 block
  ++;
 
-583 
+605 
 i
  = 0; i < 
 MAX_THREAD
 ; i++)
 
-584 if(
+606 if(
 thªad_£nd_ªcv
 [
 i
 ] != 0)
 
-585 
+607 
 	`±hªad_joö
  (
 thªad_£nd_ªcv
@@ -2939,23 +2877,23 @@ i
 NULL
 );
 
-586 
+608 
 	`sockë_˛o£
 ();
 
-588 
+610 
 	}
 }
 
-593 
+615 
 	$maö
 ()
 
-595 
+617 
 	`ˇŒ_pyth⁄_öãrÁ˚
 ("ccccc", 5);
 
-597 
+619 
 	}
 }
 
