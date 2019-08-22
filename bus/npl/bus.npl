@@ -111,6 +111,11 @@ program bus_example {
 	/* do calculation */
 	//do_calculation();
 
+
+	if(ingress_pkt.l3_hdr.ipv4._PRESENT){
+		print("ipv4 present\n");
+	}
+
     /* MMU: */
     base_assign_destination();
     BASE_MMU; /* BASE_MMU macro implements default MMU SpecialFunction*/
