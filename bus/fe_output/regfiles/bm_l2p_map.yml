@@ -1,0 +1,163 @@
+ps_bias:
+    0:
+        ps_bias:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 15, 0, value3, 15, 0]
+            - [value2, 15, 0, value2, 15, 0]
+            - [value1, 15, 0, value1, 15, 0]
+            - [value0, 15, 0, value0, 15, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_bias_exp:
+    0:
+        ps_bias_exp:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 15, 0, value3, 15, 0]
+            - [value2, 15, 0, value2, 15, 0]
+            - [value1, 15, 0, value1, 15, 0]
+            - [value0, 15, 0, value0, 15, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_exp:
+    0:
+        ps_exp:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 15, 0, value3, 15, 0]
+            - [value2, 15, 0, value2, 15, 0]
+            - [value1, 15, 0, value1, 15, 0]
+            - [value0, 15, 0, value0, 15, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_value:
+    0:
+        ps_value:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value31, 8191, 0, value31, 8191, 0]
+            - [value30, 8191, 0, value30, 8191, 0]
+            - [value00, 8191, 0, value00, 8191, 0]
+            - [value01, 8191, 0, value01, 8191, 0]
+            - [value11, 8191, 0, value11, 8191, 0]
+            - [value10, 8191, 0, value10, 8191, 0]
+            - [value20, 8191, 0, value20, 8191, 0]
+            - [value21, 8191, 0, value21, 8191, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_worker_bits:
+    0:
+        ps_worker_bits:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 15, 0, value3, 15, 0]
+            - [value2, 15, 0, value2, 15, 0]
+            - [value1, 15, 0, value1, 15, 0]
+            - [value0, 15, 0, value0, 15, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_worker_count:
+    0:
+        ps_worker_count:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 15, 0, value3, 15, 0]
+            - [value2, 15, 0, value2, 15, 0]
+            - [value1, 15, 0, value1, 15, 0]
+            - [value0, 15, 0, value0, 15, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_worker_init_bits:
+    0:
+        ps_worker_init_bits:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 15, 0, value3, 15, 0]
+            - [value2, 15, 0, value2, 15, 0]
+            - [value1, 15, 0, value1, 15, 0]
+            - [value0, 15, 0, value0, 15, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_worker_sip:
+    0:
+        ps_worker_sip:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 31, 0, value3, 31, 0]
+            - [value2, 31, 0, value2, 31, 0]
+            - [value1, 31, 0, value1, 31, 0]
+            - [value0, 31, 0, value0, 31, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_worker_smac:
+    0:
+        ps_worker_smac:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 47, 0, value3, 47, 0]
+            - [value2, 47, 0, value2, 47, 0]
+            - [value1, 47, 0, value1, 47, 0]
+            - [value0, 47, 0, value0, 47, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+ps_worker_sport:
+    0:
+        ps_worker_sport:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [value3, 15, 0, value3, 15, 0]
+            - [value2, 15, 0, value2, 15, 0]
+            - [value1, 15, 0, value1, 15, 0]
+            - [value0, 15, 0, value0, 15, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+sfc_edb_profile:
+    0:
+        sfc_edb_profile:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [_VALID, 0, 0, _VALID, 0, 0]
+            - [_INDEX, 0, 0, _INDEX, 0, 0]
+            - [edb_index, 0, 0, edb_index, 0, 0]
+            - [in_drop_vector, 63, 0, in_drop_vector, 63, 0]
+            - [in_dst_mod, 63, 0, in_dst_mod, 63, 0]
+            - [in_dst_port, 63, 0, in_dst_port, 63, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+sfc_iarb_profile:
+    0:
+        sfc_iarb_profile:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [_VALID, 0, 0, _VALID, 0, 0]
+            - [_INDEX, 0, 0, _INDEX, 0, 0]
+            - [iarb_index, 0, 0, iarb_index, 0, 0]
+            - [out_otpid_enable, 63, 0, out_otpid_enable, 63, 0]
+            - [out_ts_enable, 63, 0, out_ts_enable, 63, 0]
+            - [out_port_num, 63, 0, out_port_num, 63, 0]
+            - [out_port_type_cfg, 63, 0, out_port_type_cfg, 63, 0]
+            - [out_currenttime, 63, 0, out_currenttime, 63, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+sfc_mmu_profile:
+    0:
+        sfc_mmu_profile:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [_VALID, 0, 0, _VALID, 0, 0]
+            - [_INDEX, 0, 0, _INDEX, 0, 0]
+            - [mmu_index, 0, 0, mmu_index, 0, 0]
+            - [in_l2_pbm, 63, 0, in_l2_pbm, 63, 0]
+            - [in_l3_pbm, 63, 0, in_l3_pbm, 63, 0]
+            - [out_dst_port, 63, 0, out_dst_port, 63, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []
+tuple_t:
+    0:
+        tuple_t:
+            ENUMS: []
+            LOGICAL_MAP:
+            - [data_t, 31, 0, data_t, 31, 0]
+            METADATA: []
+            PHYSICAL_FIELDS_CONST: []

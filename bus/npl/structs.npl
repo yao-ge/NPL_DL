@@ -3,6 +3,7 @@
 #define BLOCK_ADDR (packet_info.job_id * BLOCK_SIZE + packet_info.sequence % BLOCK_SIZE)
 #define WORKER_BITS_ADDR BLOCK_ADDR
 #define WORKER_COUNT_ADDR BLOCK_ADDR
+#define WORKER_BITS_RESET_ADDR (packet_info.job_id * BLOCK_SIZE +(packet_info.sequence - (BLOCK_SIZE/2))% BLOCK_SIZE)
 
 #define WORKER_INFO_SAVE_ADDR (packet_info.job_id * BLOCK_SIZE + packet_info.worker_count - 1)
 #define WORKER_INFO_LOAD_ADDR (packet_info.job_id * BLOCK_SIZE + packet_info.worker_count)
@@ -30,6 +31,9 @@ struct tmp_t {
 		bit[48] value_48;
 		bit[32] value_32;
 		bit[16] value_16;
+		bit[16] set_cast;
+		bit[16] diff_exp;
+		bit[16] shift;
 	}
 }
 
@@ -55,7 +59,7 @@ struct packet_info_t {
 		bit[16] worker_bits;
 		bit[16] max_worker_bits;
 		bit[16] reset_worker_bits;
-		packet_value_t masks[BLOCK_COUNT];
+		packet_value_t masks;
 	}
 }
 

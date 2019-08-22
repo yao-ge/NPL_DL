@@ -1,0 +1,663 @@
+aux_common_exact:
+    logical:
+        lhdf_index_hw_entry_info: 0
+        lmi_num_edw: 1
+        lmi_num_ekw: 1
+        lmi_pt_type: LT_PT_TYPE_HASH
+    physical:
+        bhfl_num_fields: 1
+        bhri_field_width: 1
+        bhri_num_reps: 1
+        brhhei_hw_dtype_field_start_bit: 0
+        brhhei_hw_dtype_field_width: 0
+        brhhei_num_base_entries: 1
+        brhmi_en_base_valid: FALSE
+        brhmi_hash_type: BCMPTM_RM_HASH_TYPE_DUAL
+        brhmi_hw_entry_valid_bitmap: 1
+        brhmi_hw_logical_bank_mapping: TRUE
+        brhmi_key_type_val: 0
+        brhmi_lt_hash_ktype_as_dtype: FALSE
+        brhmi_num_bank_sid: 1
+        brhmi_num_banks: 2
+        brhmi_num_base_entries: 8
+        brhmi_valid_pbank_bitmap: 3
+        brhva_hw_lsb_field_start_bit: 0
+        brhva_hw_lsb_field_width: 0
+        brhvba0_en_robust: FALSE
+        brhvba0_logical_bank: 0
+        brhvba0_robust_action_sid: INVALIDm
+        brhvba0_robust_remap_sid: INVALIDm
+        brhvba0_type: BCMPTM_RM_HASH_VEC_CRC32
+        brhvba1_en_robust: FALSE
+        brhvba1_logical_bank: 1
+        brhvba1_robust_action_sid: INVALIDm
+        brhvba1_robust_remap_sid: INVALIDm
+        brhvba1_type: BCMPTM_RM_HASH_VEC_CRC32
+aux_common_ternary:
+    logical:
+        lmi_num_edw: 1
+        lmi_num_ekw: 1
+        lmi_pt_type: LT_PT_TYPE_TCAM_PRI_ONLY
+    physical:
+        brthei_group_mode: 0
+        brthei_hw_dtype_field_start_bit: 0
+        brthei_hw_dtype_field_width: 0
+        brthei_hw_ktype_field_info: NULL
+        brthei_key_type_val: NULL
+        brthei_num_data_rows: 1
+        brthei_num_depth_inst: 1
+        brthei_num_key_rows: 1
+        brthei_sid_data_only: NULL
+        brtmi_hw_atomicity_support: 1
+        brtmi_pipe_count: 1
+blocks:
+    BMPORT:
+        BLKTYPE: BMPORT
+        BLOCKNUM: 1
+        DESC: |-
+            Behavioral Model Port
+        MEMBASE: 0
+        NUMPORT: 1
+        PORTIDX: 0
+        REGBASE: 0
+    IPIPE:
+        BLKTYPE: IPIPE
+        BLOCKNUM: 0
+        DESC: |-
+            Ingress Pipeline
+        MEMBASE: 0
+        NUMPORT: 1
+        PORTIDX: 0
+        REGBASE: 0
+blocktypes:
+    BMPORT:
+        DESC: |-
+            Behavioral Model Port
+    IPIPE:
+        DESC: |-
+            Ingress Pipeline
+memories:
+    sfc_edb_profile:
+        BLOCKS: [IPIPE]
+        BM_SID: 1
+        CMP_FN: '_soc_mem_cmp_undef'
+        DESC: |-
+            Special Function edb Table - sfc_edb_profile
+        FIELDS:
+            _INDEX:
+                DESC: |-
+                    Index
+                MAXBIT: 1
+                MINBIT: 1
+                ORDER: 1
+                TAG: index_
+                WIDTH: 1
+            _VALID:
+                DESC: |-
+                    VALID bit
+                MAXBIT: 0
+                MINBIT: 0
+                ORDER: 0
+                TAG: valid
+                WIDTH: 1
+            edb_index:
+                DESC: |-
+                    Key
+                MAXBIT: 2
+                MINBIT: 2
+                ORDER: 2
+                TAG: key
+                WIDTH: 1
+            in_drop_vector:
+                BUS_SELECT_WIDTH: 16
+                DESC: |-
+                    Input - drop_vector
+                MAXBIT: 66
+                MINBIT: 3
+                ORDER: 3
+                TAG: bus_select
+                WIDTH: 64
+            in_dst_mod:
+                BUS_SELECT_WIDTH: 8
+                DESC: |-
+                    Input - dst_mod
+                MAXBIT: 130
+                MINBIT: 67
+                ORDER: 4
+                TAG: bus_select
+                WIDTH: 64
+            in_dst_port:
+                BUS_SELECT_WIDTH: 7
+                DESC: |-
+                    Input - dst_port
+                MAXBIT: 194
+                MINBIT: 131
+                ORDER: 5
+                TAG: bus_select
+                WIDTH: 64
+        MAXIDX: 1
+        MAX_SIZE: 2
+        MINIDX: 0
+        MIN_SIZE: 2
+        NULL_ENT: '_soc_mem_entry_null_zeroes'
+        OBJ_SOURCE: npl
+        TABLE_TYPE: INDEX
+    sfc_iarb_profile:
+        BLOCKS: [IPIPE]
+        BM_SID: 2
+        CMP_FN: '_soc_mem_cmp_undef'
+        DESC: |-
+            Special Function iarb Table - sfc_iarb_profile
+        FIELDS:
+            _INDEX:
+                DESC: |-
+                    Index
+                MAXBIT: 1
+                MINBIT: 1
+                ORDER: 1
+                TAG: index_
+                WIDTH: 1
+            _VALID:
+                DESC: |-
+                    VALID bit
+                MAXBIT: 0
+                MINBIT: 0
+                ORDER: 0
+                TAG: valid
+                WIDTH: 1
+            iarb_index:
+                DESC: |-
+                    Key
+                MAXBIT: 2
+                MINBIT: 2
+                ORDER: 2
+                TAG: key
+                WIDTH: 1
+            out_currenttime:
+                BUS_SELECT_WIDTH: 16
+                DESC: |-
+                    Output - currenttime
+                MAXBIT: 322
+                MINBIT: 259
+                ORDER: 7
+                TAG: bus_select
+                WIDTH: 64
+            out_otpid_enable:
+                BUS_SELECT_WIDTH: 4
+                DESC: |-
+                    Output - otpid_enable
+                MAXBIT: 66
+                MINBIT: 3
+                ORDER: 3
+                TAG: bus_select
+                WIDTH: 64
+            out_port_num:
+                BUS_SELECT_WIDTH: 7
+                DESC: |-
+                    Output - port_num
+                MAXBIT: 194
+                MINBIT: 131
+                ORDER: 5
+                TAG: bus_select
+                WIDTH: 64
+            out_port_type_cfg:
+                BUS_SELECT_WIDTH: 2
+                DESC: |-
+                    Output - port_type_cfg
+                MAXBIT: 258
+                MINBIT: 195
+                ORDER: 6
+                TAG: bus_select
+                WIDTH: 64
+            out_ts_enable:
+                BUS_SELECT_WIDTH: 1
+                DESC: |-
+                    Output - ts_enable
+                MAXBIT: 130
+                MINBIT: 67
+                ORDER: 4
+                TAG: bus_select
+                WIDTH: 64
+        MAXIDX: 1
+        MAX_SIZE: 2
+        MINIDX: 0
+        MIN_SIZE: 2
+        NULL_ENT: '_soc_mem_entry_null_zeroes'
+        OBJ_SOURCE: npl
+        TABLE_TYPE: INDEX
+    sfc_mmu_profile:
+        BLOCKS: [IPIPE]
+        BM_SID: 3
+        CMP_FN: '_soc_mem_cmp_undef'
+        DESC: |-
+            Special Function mmu Table - sfc_mmu_profile
+        FIELDS:
+            _INDEX:
+                DESC: |-
+                    Index
+                MAXBIT: 1
+                MINBIT: 1
+                ORDER: 1
+                TAG: index_
+                WIDTH: 1
+            _VALID:
+                DESC: |-
+                    VALID bit
+                MAXBIT: 0
+                MINBIT: 0
+                ORDER: 0
+                TAG: valid
+                WIDTH: 1
+            in_l2_pbm:
+                BUS_SELECT_WIDTH: 128
+                DESC: |-
+                    Input - l2_pbm
+                MAXBIT: 66
+                MINBIT: 3
+                ORDER: 3
+                TAG: bus_select
+                WIDTH: 64
+            in_l3_pbm:
+                BUS_SELECT_WIDTH: 128
+                DESC: |-
+                    Input - l3_pbm
+                MAXBIT: 130
+                MINBIT: 67
+                ORDER: 4
+                TAG: bus_select
+                WIDTH: 64
+            mmu_index:
+                DESC: |-
+                    Key
+                MAXBIT: 2
+                MINBIT: 2
+                ORDER: 2
+                TAG: key
+                WIDTH: 1
+            out_dst_port:
+                BUS_SELECT_WIDTH: 7
+                DESC: |-
+                    Output - dst_port
+                MAXBIT: 194
+                MINBIT: 131
+                ORDER: 5
+                TAG: bus_select
+                WIDTH: 64
+        MAXIDX: 1
+        MAX_SIZE: 2
+        MINIDX: 0
+        MIN_SIZE: 2
+        NULL_ENT: '_soc_mem_entry_null_zeroes'
+        OBJ_SOURCE: npl
+        TABLE_TYPE: INDEX
+registers:
+    ps_bias:
+        BM_SID: 4
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 15
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 16
+            value1:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 16
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 16
+            value2:
+                DESC: ''
+                MAXBIT: 47
+                MINBIT: 32
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 16
+            value3:
+                DESC: ''
+                MAXBIT: 63
+                MINBIT: 48
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 16
+        OBJ_SOURCE: npl
+    ps_bias_exp:
+        BM_SID: 5
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 15
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 16
+            value1:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 16
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 16
+            value2:
+                DESC: ''
+                MAXBIT: 47
+                MINBIT: 32
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 16
+            value3:
+                DESC: ''
+                MAXBIT: 63
+                MINBIT: 48
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 16
+        OBJ_SOURCE: npl
+    ps_exp:
+        BM_SID: 6
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 15
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 16
+            value1:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 16
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 16
+            value2:
+                DESC: ''
+                MAXBIT: 47
+                MINBIT: 32
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 16
+            value3:
+                DESC: ''
+                MAXBIT: 63
+                MINBIT: 48
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 16
+        OBJ_SOURCE: npl
+    ps_value:
+        BM_SID: 7
+        DESC: ''
+        FIELDS:
+            value00:
+                DESC: ''
+                MAXBIT: 8191
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 8192
+            value01:
+                DESC: ''
+                MAXBIT: 16383
+                MINBIT: 8192
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 8192
+            value10:
+                DESC: ''
+                MAXBIT: 24575
+                MINBIT: 16384
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 8192
+            value11:
+                DESC: ''
+                MAXBIT: 32767
+                MINBIT: 24576
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 8192
+            value20:
+                DESC: ''
+                MAXBIT: 40959
+                MINBIT: 32768
+                ORDER: 4
+                RESETVAL: 0
+                WIDTH: 8192
+            value21:
+                DESC: ''
+                MAXBIT: 49151
+                MINBIT: 40960
+                ORDER: 5
+                RESETVAL: 0
+                WIDTH: 8192
+            value30:
+                DESC: ''
+                MAXBIT: 57343
+                MINBIT: 49152
+                ORDER: 6
+                RESETVAL: 0
+                WIDTH: 8192
+            value31:
+                DESC: ''
+                MAXBIT: 65535
+                MINBIT: 57344
+                ORDER: 7
+                RESETVAL: 0
+                WIDTH: 8192
+        OBJ_SOURCE: npl
+    ps_worker_bits:
+        BM_SID: 8
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 15
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 16
+            value1:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 16
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 16
+            value2:
+                DESC: ''
+                MAXBIT: 47
+                MINBIT: 32
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 16
+            value3:
+                DESC: ''
+                MAXBIT: 63
+                MINBIT: 48
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 16
+        OBJ_SOURCE: npl
+    ps_worker_count:
+        BM_SID: 9
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 15
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 16
+            value1:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 16
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 16
+            value2:
+                DESC: ''
+                MAXBIT: 47
+                MINBIT: 32
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 16
+            value3:
+                DESC: ''
+                MAXBIT: 63
+                MINBIT: 48
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 16
+        OBJ_SOURCE: npl
+    ps_worker_init_bits:
+        BM_SID: 10
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 15
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 16
+            value1:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 16
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 16
+            value2:
+                DESC: ''
+                MAXBIT: 47
+                MINBIT: 32
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 16
+            value3:
+                DESC: ''
+                MAXBIT: 63
+                MINBIT: 48
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 16
+        OBJ_SOURCE: npl
+    ps_worker_sip:
+        BM_SID: 11
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 32
+            value1:
+                DESC: ''
+                MAXBIT: 63
+                MINBIT: 32
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 32
+            value2:
+                DESC: ''
+                MAXBIT: 95
+                MINBIT: 64
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 32
+            value3:
+                DESC: ''
+                MAXBIT: 127
+                MINBIT: 96
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 32
+        OBJ_SOURCE: npl
+    ps_worker_smac:
+        BM_SID: 12
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 47
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 48
+            value1:
+                DESC: ''
+                MAXBIT: 95
+                MINBIT: 48
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 48
+            value2:
+                DESC: ''
+                MAXBIT: 143
+                MINBIT: 96
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 48
+            value3:
+                DESC: ''
+                MAXBIT: 191
+                MINBIT: 144
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 48
+        OBJ_SOURCE: npl
+    ps_worker_sport:
+        BM_SID: 13
+        DESC: ''
+        FIELDS:
+            value0:
+                DESC: ''
+                MAXBIT: 15
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 16
+            value1:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 16
+                ORDER: 1
+                RESETVAL: 0
+                WIDTH: 16
+            value2:
+                DESC: ''
+                MAXBIT: 47
+                MINBIT: 32
+                ORDER: 2
+                RESETVAL: 0
+                WIDTH: 16
+            value3:
+                DESC: ''
+                MAXBIT: 63
+                MINBIT: 48
+                ORDER: 3
+                RESETVAL: 0
+                WIDTH: 16
+        OBJ_SOURCE: npl
+    tuple_t:
+        BM_SID: 14
+        DESC: ''
+        FIELDS:
+            data_t:
+                DESC: ''
+                MAXBIT: 31
+                MINBIT: 0
+                ORDER: 0
+                RESETVAL: 0
+                WIDTH: 32
+        OBJ_SOURCE: npl

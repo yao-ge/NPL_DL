@@ -108,13 +108,13 @@ program bus_example {
     /* Ingress */
     parse_begin(start);
 
-	/* do calculation */
-	//do_calculation();
-
-
 	if(ingress_pkt.l3_hdr.ipv4._PRESENT){
 		print("ipv4 present\n");
 	}
+
+	/* do calculation */
+	do_calculation();
+
 
     /* MMU: */
     base_assign_destination();

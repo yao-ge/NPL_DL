@@ -8,20 +8,52 @@
 #define DROP_REASON__ZERO_DA 0x00000002
 #define DROP_REASON__ZERO_SA 0x00000001
 
+#define MOVE_BITS(values, bit_num)              \
+	values = (values << bit_num) | values;      \
+
+#define MINUS_SHIFT(shift, masks)               \
+	if(shift != 0){							    \
+		shift = shift - 1;					    \
+	}										    \
+	if(shift != 0){							    \
+		masks = (masks >> 1) & masks;		    \
+	}										    \
+
+#define CALC_MASKS(shift)				        \
+	packet_info.masks.value = 0x7fff;	        \
+	MOVE_BITS(packet_info.masks.value, 16)      \
+	MOVE_BITS(packet_info.masks.value, 32)      \
+	MOVE_BITS(packet_info.masks.value, 64)      \
+	MOVE_BITS(packet_info.masks.value, 128)     \
+	MOVE_BITS(packet_info.masks.value, 256)     \
+	MOVE_BITS(packet_info.masks.value, 512)     \
+	MOVE_BITS(packet_info.masks.value, 1024)    \
+	MOVE_BITS(packet_info.masks.value, 2048)    \
+	MOVE_BITS(packet_info.masks.value, 4096)    \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+	MINUS_SHIFT(shift, packet_info.masks.value) \
+
 #define ADD_SUFFIX(name, num) name##num
 
-#define DATA_READ(var_index, var_1, var_2)	\
-	if(0x00 == var_index){					\
-		var_2 = ADD_SUFFIX(var_1, 0);		\
-	}else if(0x01 == var_index){			\
-		var_2 = ADD_SUFFIX(var_1, 1);		\
-	}else if(0x02 == var_index){			\
-		var_2 = ADD_SUFFIX(var_1, 2);		\
-	}else if(0x03 == var_index){			\
-		var_2 = ADD_SUFFIX(var_1, 3);		\
-	}else{									\
-		do_drop_action();					\
-	}										\
+#define DATA_READ(var_index, var_1, var_2)	    \
+	if(0x00 == var_index){					    \
+		var_2 = ADD_SUFFIX(var_1, 0);		    \
+	}else if(0x01 == var_index){			    \
+		var_2 = ADD_SUFFIX(var_1, 1);		    \
+	}else if(0x02 == var_index){			    \
+		var_2 = ADD_SUFFIX(var_1, 2);		    \
+	}else if(0x03 == var_index){			    \
+		var_2 = ADD_SUFFIX(var_1, 3);		    \
+	}else{									    \
+		do_drop_action();					    \
+	}										    \
 
 
 #define DATA_WRITE(var_index, var_1, var_2)	    \
@@ -40,12 +72,14 @@
 
 
 function do_drop_action() {
+	print("do drop action\n");
 	tmp.value_1 = 1;
 	packet_drop(tmp.value_1, DROP_REASON__ZERO_SA, 0);
 	egr_aux_bus.drop_vector = 1;
 }
 
 function reset_worker_bits() {
+	print("reset worker bits\n");
 	ps_worker_bits.value0 =0;
 	ps_worker_bits.value1 =0;
 	ps_worker_bits.value2 =0;
@@ -55,16 +89,12 @@ function reset_worker_bits() {
 
 function set_bcast() {
 	/* set egress dmac[40:40] = 1 */
-	egress_pkt.l2_hdr = ingress_pkt.l2_hdr;
-	egress_pkt.l3_hdr = ingress_pkt.l3_hdr;
-	egress_pkt.l4_hdr = ingress_pkt.l4_hdr;
-	tmp.value_1 = 1;
 	print("set broadcast\n");
-	egress_pkt.l2_hdr.l2.macsa[40:40] = tmp.value_1;
-	egress_pkt.l2_hdr.l2.macda[40:40] = tmp.value_1;
+	tmp.set_cast = 1;
 }
 
 function reset_all() {
+	print("reset all\n");
 	ps_worker_bits.value0 = 0;
 	ps_worker_bits.value1 = 0;
 	ps_worker_bits.value2 = 0;
@@ -72,6 +102,7 @@ function reset_all() {
 }
 
 function update_all_header() {
+	print("update all header\n");
 	egress_pkt.l2_hdr = ingress_pkt.l2_hdr;
 	egress_pkt.l3_hdr = ingress_pkt.l3_hdr;
 	egress_pkt.l4_hdr = ingress_pkt.l4_hdr;
@@ -83,9 +114,12 @@ function update_all_header() {
 
 	egress_pkt.l4_hdr.udp.dport = ingress_pkt.l4_hdr.udp.sport;
 	egress_pkt.l4_hdr.udp.sport = ingress_pkt.l4_hdr.udp.dport;
+	print("egress_pkt.l4_hdr.udp.dport:%d, egress_pkt.l4_hdr.udp.sport:%d\n", 
+			egress_pkt.l4_hdr.udp.dport, egress_pkt.l4_hdr.udp.sport);
 }
 
 function save_worker() {
+	print("save worker\n");
 	index.value_32 = WORKER_INFO_SAVE_ADDR;
 	DATA_WRITE(index.value_32, ingress_pkt.l2_hdr.l2.macsa, ps_worker_smac.value)
 	DATA_WRITE(index.value_32, ingress_pkt.l3_hdr.ipv4.sip, ps_worker_sip.value)
@@ -93,73 +127,249 @@ function save_worker() {
 }
 
 function worker_count_reset() {
+	print("worker count reset\n");
 	index.value_32 = WORKER_COUNT_ADDR;
 	DATA_WRITE(index.value_32, 0, ps_worker_count.value)
 }
 
 function worker_count_add() {
+	print("worker count add\n");
 	index.value_32 = WORKER_COUNT_ADDR;
 	DATA_READ(index.value_32, ps_worker_count.value, tmp.value_16)
-	print("tmp worker count:%d\n", tmp.value_16);
 	tmp.value_16 = tmp.value_16 + 1;
 	DATA_WRITE(index.value_32, tmp.value_16, ps_worker_count.value)
 	packet_info.worker_count = tmp.value_16;
-	print("packet info worker count:%d\n", packet_info.worker_count);
 }
 
 function worker_count_set() {
+	print("worker count set\n");
 	index.value_32 = WORKER_COUNT_ADDR;
 	DATA_WRITE(index.value_32, packet_info.max_worker, ps_worker_count.value)
 	packet_info.worker_count = packet_info.max_worker;
 }
 
 function load_init_bits() {
+	print("load init bits\n");
 	index.value_32 = WORKER_BITS_ADDR;
-	//print("index value:%d\n", index.value_32);
 	DATA_READ(index.value_32, ps_worker_init_bits.value, \
 			packet_info.worker_init_bits)
-	//print("packet info worker init bits:%d\n", packet_info.worker_init_bits);
 }
 
 function reset_init_bits() {
+	print("reset init bits\n");
 	index.value_32 = WORKER_BITS_ADDR;
 	DATA_WRITE(index.value_32, 0, ps_worker_init_bits.value)
 }
 
 function set_init_bits() {
+	print("set init bits\n");
 	index.value_32 = WORKER_BITS_ADDR;
 	DATA_READ(index.value_32, ps_worker_init_bits.value, tmp.value_16)
-	//print("tmp:%d, worker id:%d\n", tmp.value_16, packet_info.worker_id);
     tmp.value_16 = tmp.value_16 | (1 << packet_info.worker_id);
-	//print("tmp:%d\n", tmp.value_16);
 	DATA_WRITE(index.value_32, tmp.value_16, ps_worker_init_bits.value)
 	packet_info.worker_init_bits = tmp.value_16;
 }
 
+function reset_bits() {
+	print("reset bits\n");
+	index.value_32 = WORKER_BITS_RESET_ADDR;
+	DATA_WRITE(index.value_32, 0, ps_worker_bits.value)
+}
+
+function load_bits() {
+	print("load bits\n");
+	index.value_32 = WORKER_BITS_ADDR;
+	DATA_READ(index.value_32, ps_worker_bits.value, packet_info.worker_bits)
+}
+
+function load_reset_bits() {
+	print("load reset bits\n");
+	index.value_32 = WORKER_BITS_ADDR;
+	DATA_READ(index.value_32, ps_worker_bits.value, packet_info.reset_worker_bits)
+}
+
+function load_exp() {
+	print("load exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_READ(index.value_32, ps_exp.value, egress_pkt.l4_hdr.udp.exp)
+}
+
+function read_exp() {
+	print("read exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_READ(index.value_32, ps_exp.value, packet_info.exp)
+}
+
+function save_first_exp() {
+	print("save first exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_WRITE(index.value_32, ingress_pkt.l4_hdr.udp_exp, ps_exp.value)
+}
+
+function save_exp() {
+	print("save exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_READ(index.value_32, ps_exp.value, tmp.value_16)
+    if(tmp.value_16 >= ingress_pkt.l4_hdr.udp.exp){
+		tmp.value_16 = ingress_pkt.l4_hdr.udp.exp;
+	}
+	DATA_WRITE(index.value_32, tmp.value_16, ps_exp.value)
+}
+
+function reset_exp() {
+	print("reset exponent\n");
+	DATA_WRITE(index.value_32, 0x7fff, ps_exp.value)
+}
+
+function load_bias_exp() {
+	print("load bias exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_READ(index.value_32, ps_bias_exp.value, egress_pkt.l4_hdr.udp.bias_exp)
+}
+
+function read_bias_exp() {
+	print("read bias exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_READ(index.value_32, ps_bias_exp.value, packet_info.bias_exp)
+}
+
+function save_first_bias_exp() {
+	print("save first bias exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_WRITE(index.value_32, ingress_pkt.l4_hdr.udp.bias_exp, ps_bias_exp.value)
+}
+
+function save_bias_exp() {
+	print("save bias exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_READ(index.value_32, ps_bias_exp.value, tmp.value_16)
+	if(tmp.value_16 > ingress_pkt.l4_hdr.udp.bias_exp){
+		tmp.value_16 = ingress_pkt.l4_hdr.udp.bias_exp;
+	}
+	DATA_WRITE(index.value_32, tmp.value_16, ps_bias_exp.value)
+}
+
+function reset_bias_exp() {
+	print("reset bias exponent\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_WRITE(index.value_32, 0x7fff, ps_bias_exp.value)
+}
+
+function load_bias() {
+	print("load bias\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_READ(index.value_32, ps_bias.value, egress_pkt.l4_hdr.udp.bias)
+}
+
+function save_first_bias() {
+	print("save first bias\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_WRITE(index.value_32, ingress_pkt.l4_hdr.udp.bias, ps_bias.value)
+}
+
+function save_bias() {
+	print("save bias\n");
+	index.value_32 = BLOCK_ADDR;
+	read_bias_exp();
+	DATA_READ(index.value_32, ps_bias.value, tmp.value_16)
+	if(packet_info.bias_exp >= ingress_pkt.l4_hdr.udp.bias_exp){
+		tmp.shift = packet_info.bias_exp - ingress_pkt.l4_hdr.udp.bias_exp;
+	}else{
+		tmp.shift = ingress_pkt.l4_hdr.udp.bias_exp - packet_info.bias_exp;
+	}
+
+	if(0 == tmp.shift){
+		tmp.value_16 = tmp.value_16 + ingress_pkt.l4_hdr.udp.bias;
+	}else{
+		if(packet_info.bias_exp >= ingress_pkt.l4_hdr.udp.bias_exp){
+			tmp.value_16 = tmp.value_16 >> tmp.shift + ingress_pkt.l4_hdr.udp.bias;
+		}else{
+			tmp.value_16 = tmp.value_16 + ingress_pkt.l4_hdr.udp.bias >> tmp.shift;
+		}
+	}
+
+	DATA_WRITE(index.value_32, tmp.value_16, ps_bias.value)
+}
+
+function reset_bias() {
+	print("reset bias\n");
+	index.value_32 = BLOCK_ADDR;
+	DATA_WRITE(index.value_32, 0, ps_bias.value)
+}
+
+function load_value() {
+	print("load value\n");
+	index.value_32 = BLOCK_ADDR;
+	if(0x00 == index.value_32){
+		egress_pkt.payload.pss[0].values = ps_value.value00;
+		egress_pkt.payload.pss[1].values = ps_value.value01;
+	}else if(0x01 == index.value_32){
+		egress_pkt.payload.pss[0].values = ps_value.value10;
+		egress_pkt.payload.pss[1].values = ps_value.value11;
+	}else if(0x02 == index.value_32){
+		egress_pkt.payload.pss[0].values = ps_value.value20;
+		egress_pkt.payload.pss[1].values = ps_value.value21;
+	}else if(0x03 == index.value_32){
+		egress_pkt.payload.pss[0].values = ps_value.value30;
+		egress_pkt.payload.pss[1].values = ps_value.value31;
+	}else{
+		do_drop_action();
+	}
+}
+
+function save_first_value() {
+	print("save first value\n");
+	index.value_32 = BLOCK_ADDR;
+	if(0x00 == index.value_32){
+		ps_value.value00 = ps_value.value00 + ingress_pkt.payload.pss[0].values;
+		ps_value.value01 = ps_value.value01 + ingress_pkt.payload.pss[1].values;
+	}else if(0x01 == index.value_32){
+		ps_value.value10 = ps_value.value10 + ingress_pkt.payload.pss[0].values;
+		ps_value.value11 = ps_value.value11 + ingress_pkt.payload.pss[1].values;
+	}else if(0x02 == index.value_32){
+		ps_value.value20 = ps_value.value20 + ingress_pkt.payload.pss[0].values;
+		ps_value.value21 = ps_value.value21 + ingress_pkt.payload.pss[1].values;
+	}else if(0x03 == index.value_32){
+		ps_value.value30 = ps_value.value30 + ingress_pkt.payload.pss[0].values;
+		ps_value.value31 = ps_value.value31 + ingress_pkt.payload.pss[1].values;
+	}else{
+		do_drop_action();
+	}
+}
+
+function reset_value() {
+	print("reset value\n");
+	ps_value.value00 = 0;
+	ps_value.value01 = 0;
+	ps_value.value10 = 0;
+	ps_value.value11 = 0;
+	ps_value.value20 = 0;
+	ps_value.value21 = 0;
+	ps_value.value30 = 0;
+	ps_value.value31 = 0;
+}
+
+
 /* 通过bit位设置worker数量，bit为1的数量即最大worker数 */
 function get_max_worker_bits() {
+	print("get max worker bits\n");
 	packet_info.max_worker_bits = (1 << packet_info.max_worker) - 1;
-	//print("max worker bit:%d\n", packet_info.max_worker_bits);
 }
 
 /* reset初始化部分 */
 function reset_according_sequence() {
+	print("reset according sequence\n");
 	load_init_bits();
 
-	update_all_header();
 	if((65530 >= packet_info.sequence) && \
 			(0 == packet_info.worker_init_bits)) {
 		update_all_header();
-		print("update all header!\n");
 	}else if(packet_info.worker_init_bits \
 			& (1 << packet_info.worker_id) != 0) {
 		do_drop_action();
-		print("do drop action!\n");
 	}else {
-		print("worker init bits:%d\n", packet_info.worker_init_bits);
 
 		if(0 == packet_info.worker_init_bits) {
-			print("worker count reset!\n");
 			worker_count_reset();
 			set_init_bits();
 			worker_count_add();
@@ -184,10 +394,14 @@ function do_egress_pkt_modify() {
 	egress_pkt.l4_hdr.udp = ingress_pkt.l4_hdr.udp;
 	egress_pkt.payload = ingress_pkt.payload;
 	tmp.value_16 = ingress_pkt.l2_hdr.l2.ethertype;
-	tmp.value_1 = 1;
-	egress_pkt.l2_hdr.l2.macsa[40:40] = tmp.value_1;
-	egress_pkt.l2_hdr.l2.macda[40:40] = tmp.value_1;
-	print("set broadcast\n");
+
+	if(1 == tmp.set_cast){
+		tmp.value_1 = 1;
+		egress_pkt.l2_hdr.l2.macsa[40:40] = tmp.value_1;
+		egress_pkt.l2_hdr.l2.macda[40:40] = tmp.value_1;
+		print("set broadcast1\n");
+	}
+
 	if(egress_pkt.l2_hdr.l2._PRESENT) {
 		replace_header_field(egress_pkt.l2_hdr.l2.ethertype, tmp.value_16);
 	}else{
@@ -196,11 +410,39 @@ function do_egress_pkt_modify() {
 
 }
 
+function update_package() {
+	update_all_header();
+	load_exp();
+	load_bias();
+	load_bias_exp();
+	load_value();
+}
+
+function reset_info() {
+	reset_exp();
+	reset_bias();
+	reset_bias_exp();
+	reset_value();
+	if(packet_info.sequence > (BLOCK_SIZE / 2)){
+		load_reset_bits();
+		if(packet_info.reset_worker_bits == packet_info.max_worker_bits){
+			reset_bits();
+		}
+	}
+}
+
 function do_calculation() {
 
 	get_max_worker_bits();
 
 	if(60000 <= packet_info.sequence) {
 		reset_according_sequence();
+	}else{
+		load_bits();
+		if(packet_info.worker_bits == packet_info.max_worker_bits){
+			update_package();
+		}else if(0 == packet_info.worker_bits){
+			reset_info();
+		}
 	}
 }

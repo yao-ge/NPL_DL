@@ -275,8 +275,8 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 	}
 	block_len += pkt_len;
 
-    printf("sent block len:%d, data len:%d\n", block_len, data_len);
-    print_chars(buff, 128);
+    //printf("sent block len:%d, data len:%d\n", block_len, data_len);
+    //print_chars(buff, 128);
     //int n = sendto(sock, buff, block_len, 0, (struct sockaddr *)&sock_addr, sizeof(sock_addr));
 	int n = send(sock, buff, block_len, 0);
 	if (n < 0)
