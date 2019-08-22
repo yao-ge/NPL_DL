@@ -26,6 +26,7 @@ struct packet_value_t {
 
 struct tmp_t {
 	fields {
+		bit     value_1;
 		bit[48] value_48;
 		bit[32] value_32;
 		bit[16] value_16;

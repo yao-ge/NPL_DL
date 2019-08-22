@@ -91,7 +91,6 @@ struct udp_t {
 	}
 }
 
-/*
 struct pss_t {
 	fields {
 		bit[VALUE_BITS] values;
@@ -103,7 +102,6 @@ struct payload_grp_t {
 		pss_t  pss[BLOCK_COUNT];
 	}
 }
-*/
 
 struct l2_hdr_grp_t {
     fields {
@@ -129,7 +127,7 @@ struct ingress_pkt_t {
         l2_hdr_grp_t l2_hdr;
         l3_hdr_grp_t l3_hdr;
 		l4_hdr_grp_t l4_hdr;
-		/*payload_grp_t payload;*/
+		payload_grp_t payload;
     }
 }
 
@@ -138,7 +136,7 @@ struct egress_pkt_t {
         l2_hdr_grp_t l2_hdr;
         l3_hdr_grp_t l3_hdr;
 		l4_hdr_grp_t l4_hdr;
-		/*payload_grp_t payload;*/
+		payload_grp_t payload;
     }
 }
 

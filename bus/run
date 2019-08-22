@@ -1,4 +1,5 @@
+make clean
 make fe_nplsim
 make nplsim_comp
 make nplsim_run
-
+./demo

@@ -1,4 +1,4 @@
-cscope 15 $HOME/ncsc-1.3.3rc4/examples/npl_tidbits/constructs/bus/bm_tests/corp_net/ps_bias-master/allreduce -q 0000002924 0000217254
+cscope 15 $HOME/ncsc-1.3.3rc4/examples/npl_tidbits/constructs/bus/bm_tests/corp_net/ps_bias-master/allreduce -q 0000002924 0000217410
 	@allreduce.c
 
 1 
@@ -1201,21 +1201,13 @@ ht⁄s
 block
 );
 
-167 
-¥ötf
-("exp:%d, büs:%d, bü†exp:%d\n", 
-exp
-, 
-büs
-, 
-büs_exp
-);
-
 168 
 	gudp
 ->
 	gexp
- = (
+ = 
+ht⁄s
+(
 exp
 );
 
@@ -1223,7 +1215,9 @@ exp
 	gudp
 ->
 	gbüs
- = (
+ = 
+ht⁄s
+(
 büs
 );
 
@@ -1231,7 +1225,31 @@ büs
 	gudp
 ->
 	gbüs_exp
- = (
+ = 
+ht⁄s
+(
+büs_exp
+);
+
+172 
+¥ötf
+("job id:%04x, max_worker:%04x, worker_id:%04x, sequence:%04x,Éxp:%04x, bias:%04x, bias_exp:%04x\n",
+
+173 
+udp
+->
+job_id
+, udp->
+max_w‹kî
+, udp->
+w‹kî_id
+, udp->
+£quí˚
+, udp->
+exp
+, udp->
+büs
+, udp->
 büs_exp
 );
 
@@ -1591,15 +1609,15 @@ BYTES
 cou¡
  ;
 
-265 
+266 
 block_Àn
  = 
 BYTES
  * 
 BLOCK_SIZE
- + () * 7;
+;
 
-268 
+269 
 	`∑ddög_hódî_to_buf
 (
 buff
@@ -1611,7 +1629,7 @@ d©a_Àn
 key
 , \
 
-269 
+270 
 size
 , 
 ønk
@@ -1625,11 +1643,11 @@ büs
 büs_exp
 );
 
-291 if(0 < 
+272 if(0 < 
 d©a_Àn
 ){
 
-292 
+273 
 	`mem˝y
 –
 buff
@@ -1641,13 +1659,13 @@ d©a
 d©a_Àn
  );
 
-294 
+275 
 block_Àn
  +
 pkt_Àn
 ;
 
-299 
+280 
 n
  = 
 	`£nd
@@ -1659,15 +1677,15 @@ buff
 block_Àn
 , 0);
 
-300 i‡(
+281 i‡(
 n
  < 0)
 
-302 
+283 
 	`≥º‹
 ("sendto");
 
-303 
+284 
 	`¥ötf
 ("n:%d, sock:%d\n", 
 n
@@ -1675,11 +1693,11 @@ n
 sock
 );
 
-304 
+285 
 	`exô
 (0);
 
-311 
+292 
 n
  = 
 	`ªcv
@@ -1689,21 +1707,21 @@ sock
 buff
 , 65535, 0);
 
-312 if(
+293 if(
 n
  > 0)
 
-317 i‡(
+298 i‡(
 n
 >0 && 
 d©a_Àn
  != 0)
 
-322 
+303 
 v
 ;
 
-323 
+304 
 	`mem˝y
 –(*)&
 v
@@ -1711,9 +1729,9 @@ v
 buff
 + 
 pkt_Àn
- + 16 + 8, 2 );
+ + 2 + 8, 2 );
 
-324 *
+305 *
 exp
  = 
 	`¡ohs
@@ -1721,7 +1739,7 @@ exp
 v
 );
 
-325 
+306 
 	`mem˝y
 –(*)&
 v
@@ -1729,9 +1747,9 @@ v
 buff
 + 
 pkt_Àn
- + 16 + 10, 2 );
+ + 2 + 10, 2 );
 
-326 *
+307 *
 büs
  = 
 	`¡ohs
@@ -1739,7 +1757,7 @@ büs
 v
 );
 
-327 
+308 
 	`mem˝y
 –(*)&
 v
@@ -1747,9 +1765,9 @@ v
 buff
 + 
 pkt_Àn
- + 16 + 12, 2 );
+ + 2 + 12, 2 );
 
-328 *
+309 *
 büs_exp
  = 
 	`¡ohs
@@ -1757,7 +1775,7 @@ büs_exp
 v
 );
 
-329 
+310 
 	`mem˝y
 –(*)
 d©a
@@ -1765,31 +1783,31 @@ d©a
 buff
 + 
 pkt_Àn
- + 16 + 14, 
+ + 2 + 14, 
 d©a_Àn
  );
 
-331 i‡(
+312 i‡(
 n
 ==0)
 
-333 
+314 
 	`¥ötf
 ("server closed\n");
 
-337 i‡(
+318 i‡(
 n
  == -1)
 
-339 
+320 
 	`≥º‹
 ("recvfrom send");
 
-345 
+326 
 	}
 }
 
-348 
+329 
 	$block_öt_sum
 (
 key
@@ -1813,7 +1831,7 @@ büs
 büs_exp
 )
 
-353 
+334 
 ªt
  = 
 	`£nd_ªcv
@@ -1837,21 +1855,21 @@ büs
 büs_exp
  );
 
-354 if–
+335 if–
 ªt
  == 0 ) ;
 
-355 
+336 
 	`¥ötf
 ("ªtuª vÆue:%d\n", 
 ªt
 );
 
-360 
+341 
 	}
 }
 
-362 
+343 
 	$block_ª£t
 (
 key
@@ -1861,23 +1879,23 @@ size
 ønk
 )
 
-364 
+345 
 block
  = -1;
 
-365 
+346 
 exp
  = 0;
 
-366 
+347 
 büs
  = 0;
 
-367 
+348 
 büs_exp
  = 0;
 
-370 
+351 
 ªt
  = 
 	`£nd_ªcv
@@ -1899,51 +1917,51 @@ büs
 büs_exp
 );
 
-371 if–
+352 if–
 ªt
  == 0 ) ;
 
-372 
+353 
 block
 --;
 
-374 
+355 
 	}
 }
 
-376 
+357 
 	$¡ohŒ
 (
 vÆ
 )
 
-378  ((()
+359  ((()
 	`ht⁄l
 (()((
 vÆ
  << 32) >> 32))) << 32) | ()htonl(()(val >> 32));
 
-379 
+360 
 	}
 }
 
-381 
+362 
 	$ht⁄Œ
 (
 vÆ
 )
 
-383  ((()
+364  ((()
 	`ht⁄l
 (()((
 vÆ
  << 32) >> 32))) << 32) | ()htonl(()(val >> 32));
 
-384 
+365 
 	}
 }
 
-386 
+367 
 	$xxx
 –c⁄° *
 fmt
@@ -1951,7 +1969,7 @@ fmt
 	}
 }
 
-387 
+368 
 	$xxxx
 (c⁄° 
 d©a_t
@@ -1963,7 +1981,7 @@ cou¡
 	}
 }
 
-388 
+369 
 	$xxxxx
 (c⁄° *
 d©a
@@ -1973,7 +1991,7 @@ cou¡
 	}
 }
 
-390 
+371 
 	#¥öt_d©a
  
 xxxx
@@ -1981,7 +1999,7 @@ xxxx
 
 	)
 
-391 
+372 
 	#¥öt_Êﬂts
  
 xxxxx
@@ -1989,7 +2007,7 @@ xxxxx
 
 	)
 
-394 
+375 
 	$block_sum
 (
 key
@@ -2011,7 +2029,7 @@ mö
 max
 )
 
-396 
+377 
 d©a_t
  
 tmp
@@ -2019,7 +2037,7 @@ tmp
 BLOCK_SIZE
 ];
 
-397 
+378 
 d©a_t
  
 tmp_x
@@ -2027,7 +2045,7 @@ tmp_x
 BLOCK_SIZE
 ];
 
-399 
+380 
 	`¥öt_Êﬂts
 –
 öput
@@ -2035,13 +2053,13 @@ BLOCK_SIZE
 cou¡
 );
 
-403 
+384 
 büs
  = -
 mö
 ;
 
-406 
+387 
 exp
  = 
 	`log
@@ -2051,11 +2069,11 @@ max
 mö
 ))/log(2);
 
-407 
+388 
 exp
  = (exp > 16)?16:( (exp < -16)? -16:Éxp );
 
-409 
+390 
 ex∑nd
  = (
 exp
@@ -2065,7 +2083,7 @@ EXPAND
 size
  : ()(()EXPAND >> (-Éxp)) / size ;
 
-411 
+392 
 büs_exp
  = 
 	`log
@@ -2075,11 +2093,11 @@ büs_exp
 büs
 ))/log(2);
 
-412 
+393 
 büs_exp
  = (bias_exp > 16)?16:( (bias_exp < -16)? -16: bias_exp );
 
-414 
+395 
 büs_ex∑nd
  = (
 büs_exp
@@ -2089,7 +2107,7 @@ EXPAND
 size
  : ()(()EXPAND >> (- bias_exp)) / size ;
 
-419 
+400 
 büs_x
  = 
 büs
@@ -2097,13 +2115,13 @@ büs
 büs_ex∑nd
 ;
 
-421 
+402 
 i
  = 0; i < 
 cou¡
 ; ++i){
 
-423 
+404 
 vÆue
  = 
 öput
@@ -2111,7 +2129,7 @@ vÆue
 i
 ];
 
-426 
+407 
 tmp_x
 [
 i
@@ -2125,7 +2143,7 @@ büs
 ex∑nd
  );
 
-427 
+408 
 tmp
 [
 i
@@ -2141,7 +2159,7 @@ büs
 ex∑nd
  ));
 
-437 
+418 
 	`¥öt_d©a
 –
 tmp_x
@@ -2149,13 +2167,13 @@ tmp_x
 cou¡
 );
 
-440 
+421 
 büs_out
  = 
 büs_x
 ;
 
-441 
+422 
 	`block_öt_sum
 (
 key
@@ -2177,13 +2195,13 @@ büs_out
 büs_exp
 );
 
-444 
+425 
 i
  = 0; i < 
 cou¡
 ; ++i){
 
-445 
+426 
 tmp_x
 [
 i
@@ -2193,7 +2211,7 @@ i
 tmp
 [i]);
 
-447 
+428 
 	`¥öt_d©a
 –
 tmp_x
@@ -2201,7 +2219,7 @@ tmp_x
 cou¡
 );
 
-449 
+430 
 ex∑nd
  = (
 exp
@@ -2211,7 +2229,7 @@ EXPAND
 size
  : ()(()EXPAND >> (-Éxp)) / size ;
 
-450 
+431 
 büs_ex∑nd
  = (
 büs_exp
@@ -2221,13 +2239,13 @@ EXPAND
 size
  : ()(()EXPAND >> (- bias_exp)) / size ;
 
-453 
+434 
 i
  = 0; i < 
 cou¡
 ; ++i){
 
-455 
+436 
 ouçut
 [
 i
@@ -2243,7 +2261,7 @@ büs_out
 büs_ex∑nd
 );
 
-460 
+441 
 	`¥öt_Êﬂts
 –
 ouçut
@@ -2251,11 +2269,11 @@ ouçut
 cou¡
 );
 
-462 
+443 
 	}
 }
 
-465 
+446 
 	$gë_mö_max
 (c⁄° *
 öput
@@ -2267,25 +2285,25 @@ mö_±r
 max_±r
 ){
 
-466 
+447 
 mö
  = 
 FLT_MAX
 ;
 
-467 
+448 
 max
  = -
 FLT_MAX
 ;
 
-468 
+449 
 i
  = 0; i< 
 cou¡
  ;i++){
 
-469 if–
+450 if–
 öput
 [
 i
@@ -2293,7 +2311,7 @@ i
 mö
  ) min = input[i];
 
-470 if–
+451 if–
 öput
 [
 i
@@ -2301,23 +2319,23 @@ i
 max
  ) max = input[i];
 
-473 *
+454 *
 mö_±r
  = 
 mö
 ;
 
-474 *
+455 *
 max_±r
  = 
 max
 ;
 
-475 
+456 
 	}
 }
 
-480 
+461 
 	$swôch_sum
 (
 key
@@ -2333,11 +2351,11 @@ size
 ønk
 )
 
-482 
+463 
 	`sockë_öô
 ("127.0.0.1","9090");
 
-484 
+465 
 	`block_ª£t
 (
 key
@@ -2347,17 +2365,17 @@ size
 ønk
 );
 
-486 
+467 
 mö
 ,
 max
 ;
 
-488 
+469 
 block
  = 0;
 
-490 
+471 
 i
  = 0; i < 
 cou¡
@@ -2365,7 +2383,7 @@ cou¡
 BLOCK_SIZE
 )
 
-492 if–
+473 if–
 cou¡
  - 
 i
@@ -2373,7 +2391,7 @@ i
 BLOCK_SIZE
 ){
 
-493 
+474 
 	`gë_mö_max
 –
 öput
@@ -2387,7 +2405,7 @@ mö
 max
  );
 
-494 
+475 
 	`block_sum
 (
 key
@@ -2411,7 +2429,7 @@ mö
 max
 );
 
-498 
+479 
 	`gë_mö_max
 –
 öput
@@ -2425,7 +2443,7 @@ mö
 max
  );
 
-499 
+480 
 	`block_sum
 (
 key
@@ -2449,65 +2467,65 @@ mö
 max
 );
 
-502 
+483 
 block
  ++;
 
-505 
+486 
 	`sockë_˛o£
 ();
 
-507 
+488 
 	}
 }
 
-511 
+492 
 	#MAX_THREAD
  4
 
 	)
 
-513 
+494 
 	sblock_öfo
 {
 
-514 
+495 
 	mkey
 ;
 
-515 c⁄° * 
+496 c⁄° * 
 	möput
 ;
 
-516 *
+497 *
 	mouçut
 ;
 
-517 
+498 
 	mcou¡
 ;
 
-518 
+499 
 	mblock
 ;
 
-519 
+500 
 	msize
 ;
 
-520 
+501 
 	mønk
 ;
 
-521 
+502 
 	møã
 ;
 
-522 }
+503 }
 	tblock_öfo_t
 ;
 
-524 
+505 
 ±hªad_t
  
 	gthªad_£nd_ªcv
@@ -2515,7 +2533,7 @@ block
 MAX_THREAD
 ] = {0};
 
-525 
+506 
 block_öfo_t
  
 	gblock_ö
@@ -2523,13 +2541,13 @@ block_öfo_t
 MAX_THREAD
 ];
 
-527 *
+508 *
 	$block_sum_fun
 (*
 ¨g
 )
 
-530 
+511 
 block_öfo_t
  * 
 bl_ö
@@ -2537,7 +2555,7 @@ bl_ö
 ¨g
 ;
 
-542 
+523 
 	`block_sum
 (
 bl_ö
@@ -2559,33 +2577,33 @@ size
 øã
 );
 
-545 
+526 
 	}
 }
 
-547 
+528 
 	$gë_thªad
 (){
 
-549 
+530 
 i
 =0; i<
 MAX_THREAD
 ; i++)
 
-551 if(
+532 if(
 thªad_£nd_ªcv
 [
 i
 ] == 0)  i;
 
-553 
+534 
 i
 =0; i<
 MAX_THREAD
 ; i++)
 
-555 
+536 
 	`±hªad_joö
 (
 thªad_£nd_ªcv
@@ -2595,17 +2613,17 @@ i
 NULL
 );
 
-556 
+537 
 thªad_£nd_ªcv
 [
 i
 ] = 0;
 
-559 
+540 
 	}
 }
 
-561 
+542 
 	$¸óã
 –
 key
@@ -2625,25 +2643,25 @@ size
 øã
 ){
 
-562 
+543 
 îr
 ;
 
-564 
+545 
 thªad_ödex
 ;
 
-565 (
+546 (
 thªad_ödex
  = 
 	`gë_thªad
 ()) == -1)
 
-567 
+548 
 	`u¶ìp
 (1);
 
-570 
+551 
 ödex
  = 
 block
@@ -2651,7 +2669,7 @@ block
 MAX_THREAD
 ;
 
-572 
+553 
 block_ö
 [
 ödex
@@ -2659,7 +2677,7 @@ block_ö
 key
  = key;
 
-573 
+554 
 block_ö
 [
 ödex
@@ -2667,7 +2685,7 @@ block_ö
 öput
  = input;
 
-574 
+555 
 block_ö
 [
 ödex
@@ -2675,7 +2693,7 @@ block_ö
 ouçut
  = output;
 
-575 
+556 
 block_ö
 [
 ödex
@@ -2683,7 +2701,7 @@ block_ö
 cou¡
  = count;
 
-576 
+557 
 block_ö
 [
 ödex
@@ -2691,7 +2709,7 @@ block_ö
 block
  = block;
 
-577 
+558 
 block_ö
 [
 ödex
@@ -2699,7 +2717,7 @@ block_ö
 size
  = size;
 
-578 
+559 
 block_ö
 [
 ödex
@@ -2707,7 +2725,7 @@ block_ö
 ønk
  =Ñank;
 
-579 
+560 
 block_ö
 [
 ödex
@@ -2715,7 +2733,7 @@ block_ö
 øã
  =Ñate;
 
-581 
+562 
 îr
  = 
 	`±hªad_¸óã
@@ -2731,11 +2749,11 @@ block_sum_fun
 block_ö
 [index]);
 
-582 if(
+563 if(
 îr
  != 0) {
 
-583 
+564 
 	`¥ötf
 ("¸óãÅhªadÉº‹: %s\n",
 	`°ªº‹
@@ -2743,11 +2761,11 @@ block_ö
 îr
 ));
 
-587 
+568 
 	}
 }
 
-588 
+569 
 	$swôch_sum
 (
 key
@@ -2763,11 +2781,11 @@ size
 ønk
 )
 
-590 
+571 
 	`sockë_öô
 ("10.0.2.2","1111");
 
-591 
+572 
 	`block_ª£t
 (
 key
@@ -2777,7 +2795,7 @@ size
 ønk
 );
 
-592 
+573 
 øã
  = 
 	`gë_mö_max
@@ -2787,11 +2805,11 @@ size
 cou¡
 );
 
-593 
+574 
 block
  = 0;
 
-594 
+575 
 i
  = 0; i < 
 cou¡
@@ -2799,7 +2817,7 @@ cou¡
 BLOCK_SIZE
 )
 
-596 if–
+577 if–
 cou¡
  - 
 i
@@ -2807,7 +2825,7 @@ i
 BLOCK_SIZE
 ){
 
-597 
+578 
 	`¸óã
 (
 key
@@ -2829,7 +2847,7 @@ size
 øã
 );
 
-600 
+581 
 	`¸óã
 (
 key
@@ -2851,23 +2869,23 @@ size
 øã
 );
 
-602 
+583 
 block
  ++;
 
-605 
+586 
 i
  = 0; i < 
 MAX_THREAD
 ; i++)
 
-606 if(
+587 if(
 thªad_£nd_ªcv
 [
 i
 ] != 0)
 
-607 
+588 
 	`±hªad_joö
  (
 thªad_£nd_ªcv
@@ -2877,23 +2895,23 @@ i
 NULL
 );
 
-608 
+589 
 	`sockë_˛o£
 ();
 
-610 
+591 
 	}
 }
 
-615 
+596 
 	$maö
 ()
 
-617 
+598 
 	`ˇŒ_pyth⁄_öãrÁ˚
 ("ccccc", 5);
 
-619 
+600 
 	}
 }
 

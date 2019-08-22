@@ -66,15 +66,18 @@ parser_node ipv4 {
 parser_node udp {
 	extract_fields(ingress_pkt.l4_hdr.udp);
 	packet_info.job_id = ingress_pkt.l4_hdr.udp.job_id;
+	packet_info.max_worker = ingress_pkt.l4_hdr.udp.max_worker;
 	packet_info.worker_id = ingress_pkt.l4_hdr.udp.worker_id;
 	packet_info.sequence = ingress_pkt.l4_hdr.udp.sequence;
 	packet_info.exp = ingress_pkt.l4_hdr.udp.exp;
 	packet_info.bias = ingress_pkt.l4_hdr.udp.bias;
 	packet_info.bias_exp = ingress_pkt.l4_hdr.udp.bias_exp;
-	next_node ingress;
+	print("job id:%d, max worker:%d, worker id:%d, sequence:%d, exp:%d, bias:%d, bias_exp:%d\n", \
+			packet_info.job_id, packet_info.max_worker, packet_info.worker_id, packet_info.sequence, \
+			packet_info.exp, packet_info.bias, packet_info.bias_exp);
+	next_node payload;
 }
 
-/*
 parser_node payload {
 	extract_fields(ingress_pkt.payload.pss[0]);
 	if(1024 < ingress_pkt.l4_hdr.udp.length - 8) {
@@ -88,7 +91,6 @@ parser_node payload1 {
 	extract_fields(ingress_pkt.payload.pss[1]);
 	next_node ingress;
 }
-*/
 parser_node ingress {
     end_node: 1; 
 }
@@ -106,6 +108,9 @@ program bus_example {
     /* Ingress */
     parse_begin(start);
 
+	/* do calculation */
+	//do_calculation();
+
     /* MMU: */
     base_assign_destination();
     BASE_MMU; /* BASE_MMU macro implements default MMU SpecialFunction*/
@@ -113,6 +118,7 @@ program bus_example {
     /* Egress */
     base_egress(); /* destination-port is same as ingress-port */
 
+	do_egress_pkt_modify();
     /* OUTPUT:
      * BASE_OUTPUT macro implements standard output to BMI from program */
     BASE_OUTPUT;
