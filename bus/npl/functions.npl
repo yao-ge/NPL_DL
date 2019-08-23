@@ -78,15 +78,6 @@ function do_drop_action() {
 	egr_aux_bus.drop_vector = 1;
 }
 
-function reset_worker_bits() {
-	print("reset worker bits\n");
-	ps_worker_bits.value0 =0;
-	ps_worker_bits.value1 =0;
-	ps_worker_bits.value2 =0;
-	ps_worker_bits.value3 =0;
-}
-
-
 function set_bcast() {
 	/* set egress dmac[40:40] = 1 */
 	print("set broadcast\n");
@@ -132,6 +123,23 @@ function worker_count_reset() {
 	DATA_WRITE(index.value_32, 0, ps_worker_count.value)
 }
 
+function load_worker() {
+	print("load worker\n");
+	index.value_32 = WORKER_INFO_LOAD_ADDR;
+	DATA_READ(index.value_32, ps_worker_smac.value, egress_pkt.l2_hdr.l2.macda)
+	DATA_READ(index.value_32, ps_worker_sip.value, egress_pkt.l3_hdr.ipv4.dip)
+	DATA_READ(index.value_32, ps_worker_sport.value, egress_pkt.l4_hdr.udp.dport)
+}
+
+function worker_count_sub() {
+	print("worker count sub\n");
+	index.value_32 = WORKER_COUNT_ADDR;
+	DATA_READ(index.value_32, ps_worker_count.value, tmp.value_16)
+	tmp.value_16 = tmp.value_16 - 1;
+	packet_info.worker_count = tmp.value_16;
+	DATA_WRITE(index.value_32, tmp.value_16, ps_worker_count.value)
+}
+
 function worker_count_add() {
 	print("worker count add\n");
 	index.value_32 = WORKER_COUNT_ADDR;
@@ -170,6 +178,15 @@ function set_init_bits() {
 	packet_info.worker_init_bits = tmp.value_16;
 }
 
+function set_bits() {
+	print("set bits\n");
+	index.value_32 = WORKER_BITS_ADDR;
+	DATA_READ(index.value_32, ps_worker_bits.value, tmp.value_16)
+	tmp.value_16 = tmp.value_16 | (1 << packet_info.worker_id);
+	DATA_WRITE(index.value_32, tmp.value_16, ps_worker_bits.value)
+	packet_info.worker_bits = tmp.value_16;
+}
+
 function reset_bits() {
 	print("reset bits\n");
 	index.value_32 = WORKER_BITS_RESET_ADDR;
@@ -203,7 +220,7 @@ function read_exp() {
 function save_first_exp() {
 	print("save first exponent\n");
 	index.value_32 = BLOCK_ADDR;
-	DATA_WRITE(index.value_32, ingress_pkt.l4_hdr.udp_exp, ps_exp.value)
+	DATA_WRITE(index.value_32, ingress_pkt.l4_hdr.udp.exp, ps_exp.value)
 }
 
 function save_exp() {
@@ -349,6 +366,11 @@ function reset_value() {
 	ps_value.value31 = 0;
 }
 
+function save_value() {
+	print("save_value\n");
+	index.value_32 = BLOCK_ADDR;
+}
+
 
 /* 通过bit位设置worker数量，bit为1的数量即最大worker数 */
 function get_max_worker_bits() {
@@ -399,6 +421,8 @@ function do_egress_pkt_modify() {
 		tmp.value_1 = 1;
 		egress_pkt.l2_hdr.l2.macsa[40:40] = tmp.value_1;
 		egress_pkt.l2_hdr.l2.macda[40:40] = tmp.value_1;
+		worker_count_sub();
+		load_worker();
 		print("set broadcast1\n");
 	}
 
@@ -443,6 +467,34 @@ function do_calculation() {
 			update_package();
 		}else if(0 == packet_info.worker_bits){
 			reset_info();
+		}else if(packet_info.worker_bits & (1 << packet_info.worker_id) != 0){
+			do_drop_action();
+		}else{
+			set_bits();
+			read_exp();
+			if(0x7fff == packet_info.exp){
+				save_first_exp();
+				save_first_bias();
+				save_first_bias_exp();
+				save_first_value();
+			}else{
+				save_bias();
+				save_bias_exp();
+				save_exp();
+				save_value();
+			}
+			load_bits();
+			if(packet_info.worker_bits != packet_info.max_worker_bits){
+				do_drop_action();
+			}else{
+				worker_count_set();
+				update_all_header();
+				load_exp();
+				load_bias();
+				load_bias_exp();
+				load_value();
+				set_bcast();
+			}
 		}
 	}
 }

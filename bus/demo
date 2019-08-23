@@ -5,4 +5,4 @@
 #!/bin/bash
 
 cd ./bm_tests/corp_net/ps_bias-master/allreduce/
-./demo.sh 1
+./demo.sh 2
