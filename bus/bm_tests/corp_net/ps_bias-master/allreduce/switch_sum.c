@@ -169,9 +169,9 @@ int32_t padding_header_to_buf(char *buf, int32_t *pkt_len, int32_t data_len, \
 	udp->bias = htons(bias);
 	udp->bias_exp = htons(bias_exp);
 
-	printf("job id:%d, max_worker:%d, worker_id:%d, sequence:%d, exp:%d, bias:%d, bias_exp:%d\n",
+	//printf("job id:%d, max_worker:%d, worker_id:%d, sequence:%d, exp:%d, bias:%d, bias_exp:%d\n",
 			//udp->job_id, udp->max_worker, udp->worker_id, udp->sequence, udp->exp, udp->bias, udp->bias_exp);
-			key, size, rank, block, exp, bias, bias_exp);
+	//		key, size, rank, block, exp, bias, bias_exp);
 #endif
 	return ret;
 }
@@ -294,8 +294,8 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 		if(n > 0)
 			break;
 	}
-    printf("recv block len:%d\n", n);
-    print_chars(buff, 128);
+    //printf("recv block len:%d\n", n);
+    //print_chars(buff, 128);
 	if (n>0 && data_len != 0)
 	{
 		//buff[n] = 0;
@@ -421,7 +421,7 @@ int block_sum(int key, const float *input, float *output, int count, int block, 
     
     short bias_out = bias_x;
 	block_int_sum(key, tmp, count, block, size, rank, &exp, &bias_out, &bias_exp);
-    printf( "exp = %d    bias_out = %d  bias_exp = %d\n", exp, bias_out, bias_exp);
+    //printf( "exp = %d    bias_out = %d  bias_exp = %d\n", exp, bias_out, bias_exp);
 
 	for (int i = 0; i < count; ++i){
         tmp_x[i] = NTOH(tmp[i]);

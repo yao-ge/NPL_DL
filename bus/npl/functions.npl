@@ -370,6 +370,108 @@ function reset_value() {
 function save_value() {
 	print("save_value\n");
 	index.value_32 = BLOCK_ADDR;
+	if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+		tmp.shift = packet_info.exp - ingress_pkt.l4_hdr.udp.exp;
+	}else{
+		tmp.shift = ingress_pkt.l4_hdr.udp.exp - packet_info.exp;
+	}
+
+	CALC_MASKS(tmp.shift)
+	if(0x00 == index.value_32){
+		if(0 == tmp.shift){
+			ps_value.value00 = ps_value.value00 + ingress_pkt.payload.pss[0].values;
+			ps_value.value01 = ps_value.value01 + ingress_pkt.payload.pss[1].values;
+		}else{
+			tmp.values[0].value = ps_value.value00;
+			tmp.values[1].value = ps_value.value01;
+			if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+				tmp.values[0].value = ((tmp.values[0].value >> tmp.shift) & packet_info.masks.value) \
+								   +  ingress_pkt.payload.pss[0].values;
+				tmp.values[1].value = ((tmp.values[1].value >> tmp.shift) & packet_info.masks.value) \
+								   +  ingress_pkt.payload.pss[1].values;
+			}else{
+				tmp.values[0].value = tmp.values[0].value + \
+								   ((ingress_pkt.payload.pss[0].values >> tmp.shift) & \
+									packet_info.masks.value);
+				tmp.values[1].value = tmp.values[1].value + \
+								   ((ingress_pkt.payload.pss[1].values >> tmp.shift) & \
+									packet_info.masks.value);
+			}
+			ps_value.value00 = tmp.values[0].value;
+			ps_value.value01 = tmp.values[1].value;
+		}
+	}else if(0x01 == index.value_32){
+		if(0 == tmp.shift){
+			ps_value.value10 = ps_value.value10 + ingress_pkt.payload.pss[0].values;
+			ps_value.value11 = ps_value.value11 + ingress_pkt.payload.pss[1].values;
+		}else{
+			tmp.values[0].value = ps_value.value10;
+			tmp.values[1].value = ps_value.value11;
+			if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+				tmp.values[0].value = ((tmp.values[0].value >> tmp.shift) & packet_info.masks.value) \
+								   +  ingress_pkt.payload.pss[0].values;
+				tmp.values[1].value = ((tmp.values[1].value >> tmp.shift) & packet_info.masks.value) \
+								   +  ingress_pkt.payload.pss[1].values;
+			}else{
+				tmp.values[0].value = tmp.values[0].value + \
+								   ((ingress_pkt.payload.pss[0].values >> tmp.shift) & \
+									packet_info.masks.value);
+				tmp.values[1].value = tmp.values[1].value + \
+								   ((ingress_pkt.payload.pss[1].values >> tmp.shift) & \
+									packet_info.masks.value);
+			}
+			ps_value.value10 = tmp.values[0].value;
+			ps_value.value11 = tmp.values[1].value;
+		}
+	}else if(0x02 == index.value_32){
+		if(0 == tmp.shift){
+			ps_value.value20 = ps_value.value20 + ingress_pkt.payload.pss[0].values;
+			ps_value.value21 = ps_value.value21 + ingress_pkt.payload.pss[1].values;
+		}else{
+			tmp.values[0].value = ps_value.value20;
+			tmp.values[1].value = ps_value.value21;
+			if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+				tmp.values[0].value = ((tmp.values[0].value >> tmp.shift) & packet_info.masks.value) \
+								   +  ingress_pkt.payload.pss[0].values;
+				tmp.values[1].value = ((tmp.values[1].value >> tmp.shift) & packet_info.masks.value) \
+								   +  ingress_pkt.payload.pss[1].values;
+			}else{
+				tmp.values[0].value = tmp.values[0].value + \
+								   ((ingress_pkt.payload.pss[0].values >> tmp.shift) & \
+									packet_info.masks.value);
+				tmp.values[1].value = tmp.values[1].value + \
+								   ((ingress_pkt.payload.pss[1].values >> tmp.shift) & \
+									packet_info.masks.value);
+			}
+			ps_value.value20 = tmp.values[0].value;
+			ps_value.value21 = tmp.values[1].value;
+		}
+	}else if(0x03 == index.value_32){
+		if(0 == tmp.shift){
+			ps_value.value30 = ps_value.value30 + ingress_pkt.payload.pss[0].values;
+			ps_value.value31 = ps_value.value31 + ingress_pkt.payload.pss[1].values;
+		}else{
+			tmp.values[0].value = ps_value.value30;
+			tmp.values[1].value = ps_value.value31;
+			if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+				tmp.values[0].value = ((tmp.values[0].value >> tmp.shift) & packet_info.masks.value) \
+								   +  ingress_pkt.payload.pss[0].values;
+				tmp.values[1].value = ((tmp.values[1].value >> tmp.shift) & packet_info.masks.value) \
+								   +  ingress_pkt.payload.pss[1].values;
+			}else{
+				tmp.values[0].value = tmp.values[0].value + \
+								   ((ingress_pkt.payload.pss[0].values >> tmp.shift) & \
+									packet_info.masks.value);
+				tmp.values[1].value = tmp.values[1].value + \
+								   ((ingress_pkt.payload.pss[1].values >> tmp.shift) & \
+									packet_info.masks.value);
+			}
+			ps_value.value30 = tmp.values[0].value;
+			ps_value.value31 = tmp.values[1].value;
+		}
+	}else{
+		do_drop_action();
+	}
 }
 
 
