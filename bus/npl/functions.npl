@@ -235,6 +235,7 @@ function save_exp() {
 
 function reset_exp() {
 	print("reset exponent\n");
+	index.value_32 = BLOCK_ADDR;
 	DATA_WRITE(index.value_32, 0x7fff, ps_exp.value)
 }
 
