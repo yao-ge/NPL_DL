@@ -93,13 +93,13 @@ struct udp_t {
 
 struct pss_t {
 	fields {
-		bit[VALUE_BITS] values;
+		bit[8192] values;
 	}
 }
 
 struct payload_grp_t {
 	fields {
-		pss_t  pss[BLOCK_COUNT];
+		pss_t  pss[2];
 	}
 }
 

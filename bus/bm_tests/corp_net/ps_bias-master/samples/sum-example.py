@@ -19,8 +19,8 @@ times = 1
 with tf.device('/cpu:0'):
 
   if rank == 0:
-      const = tf.constant([-0.0001,0.0001,0.00001,0.000001,0.0000001]*times)
-      #const = tf.constant([-0.0001,-0.00001,-0.000001,-0.0000001]*times)
+      #const = tf.constant([-0.0001,0.0001,0.00001,0.000001,0.0000001]*times)
+      const = tf.constant([-0.0001,-0.00001,-0.000001,-0.0000001]*times)
       #const = tf.constant([-0.0001]*times)
       #const = tf.constant([0.1]*times)
       #const = tf.constant([1.,2.,3.,4.]*times)
@@ -29,8 +29,8 @@ with tf.device('/cpu:0'):
       #const = tf.constant([0,0,0,0]*times)
   else:
       #const = tf.constant([-0.0001,-0.00001,-0.000001,-0.0000001]*times)
-      #const = tf.constant([0.0001,0.00001,0.000001,0.0000001]*times)
-      const = tf.constant([-0.001,0.001,0.0001,0.00001,0.000001]*times)
+      const = tf.constant([0.0001,0.00001,0.000001,0.0000001]*times)
+      #const = tf.constant([-0.001,0.001,0.0001,0.00001,0.000001]*times)
       #const = tf.constant([0.001]*times)
       #const = tf.constant([-0.1]*times)
       #const = tf.constant([-1.,-2.,-3.,-4.]*times)

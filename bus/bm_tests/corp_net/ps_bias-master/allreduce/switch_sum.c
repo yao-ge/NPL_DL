@@ -115,7 +115,8 @@ int32_t padding_header_to_buf(char *buf, int32_t *pkt_len, int32_t data_len, \
 {
 	int32_t ret = 0;
 
-	uint8_t allmac[6] = {0x00, 0x00, 0x00, 0x00, 0x01, 0x01};
+	uint8_t allsmac[6] = {0x00, 0x00, 0x00, 0x00, 0x01, 0x01};
+	uint8_t alldmac[6] = {0x00, 0x00, 0x00, 0x00, 0x02, 0x02};
 	uint8_t dip[6] = {0x01, 0x02, 0x03, 0x04};
 	uint8_t sip[6] = {0x05, 0x06, 0x07, 0x08};
 
@@ -141,8 +142,8 @@ int32_t padding_header_to_buf(char *buf, int32_t *pkt_len, int32_t data_len, \
 	header->pkt_len = htonl(2048 + ether_len + ipv4_len + udp_len);
 
 	// smac dmac eth_type
-	memcpy(Ether->dmac, allmac, 6);
-	memcpy(Ether->smac, allmac, 6);
+	memcpy(Ether->dmac, alldmac, 6);
+	memcpy(Ether->smac, allsmac, 6);
 	Ether->eth_type = 0x0008;
 
 	// ipv4
@@ -169,9 +170,9 @@ int32_t padding_header_to_buf(char *buf, int32_t *pkt_len, int32_t data_len, \
 	udp->bias = htons(bias);
 	udp->bias_exp = htons(bias_exp);
 
-	//printf("job id:%d, max_worker:%d, worker_id:%d, sequence:%d, exp:%d, bias:%d, bias_exp:%d\n",
-			//udp->job_id, udp->max_worker, udp->worker_id, udp->sequence, udp->exp, udp->bias, udp->bias_exp);
-	//		key, size, rank, block, exp, bias, bias_exp);
+	printf("job id:%d, max_worker:%d, worker_id:%d, sequence:%d, exp:%d, bias:%d, bias_exp:%d\n",
+	  	//udp->job_id, udp->max_worker, udp->worker_id, udp->sequence, udp->exp, udp->bias, udp->bias_exp);
+			key, size, rank, block, exp, bias, bias_exp);
 #endif
 	return ret;
 }
@@ -257,6 +258,7 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 	char buff[BUF_SIZE] = {0};
 	int len = sizeof(sock_addr);
 	int pkt_len = 0;
+	int n = 0;
 
 #if BIT_WIDTH == 4
 	int data_len = count/2 + count%2;
@@ -271,14 +273,20 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 			size, rank, block, *exp, *bias, *bias_exp);
 
 	if(0 < data_len){
-		memcpy( buff+ pkt_len, (char*)&data, data_len );
+		//printf("before memcpy:\n");
+		//print_chars(buff, 128);
+		memcpy( buff+ pkt_len, (char*)data, data_len );
+		printf("send print data:\n");
+		print_chars((char*)data, data_len);
+		//printf("after memcpy:\n");
+		//print_chars(buff, 128);
 	}
 	block_len += pkt_len;
 
-    //printf("sent block len:%d, data len:%d\n", block_len, data_len);
-    //print_chars(buff, 128);
+    printf("sent block len:%d, data len:%d\n", block_len, data_len);
+    print_chars(buff, 128);
     //int n = sendto(sock, buff, block_len, 0, (struct sockaddr *)&sock_addr, sizeof(sock_addr));
-	int n = send(sock, buff, block_len, 0);
+	n = send(sock, buff, block_len, 0);
 	if (n < 0)
 	{
 		perror("sendto");
@@ -288,12 +296,11 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 		return -1;
 	}
 
-	while(1){
-		//n = recvfrom(sock, buff, 65535, 0, (struct sockaddr *)&sock_addr,  (socklen_t*)&len);
-		n = recv(sock, buff, 65535, 0);
-		if(n > 0)
-			break;
-	}
+	//n = recvfrom(sock, buff, 65535, 0, (struct sockaddr *)&sock_addr,  (socklen_t*)&len);
+	n = recv(sock, buff, 65535, 0);
+	if(n <= 0)
+		return -1;
+
     //printf("recv block len:%d\n", n);
     //print_chars(buff, 128);
 	if (n>0 && data_len != 0)
@@ -309,6 +316,8 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 	    memcpy( (char*)&v, buff+ pkt_len + 2 + 12, 2 );
         *bias_exp = ntohs(v);
 	    memcpy( (char*)data, buff+ pkt_len + 2 + 14, data_len );
+		printf("recv print data:\n");
+		print_chars((char*)data, data_len);
 	}
 	else if (n==0)
 	{
@@ -334,7 +343,6 @@ int block_int_sum(int key, data_t *data, int count, int block, int size, int ran
 	while(1){
         int ret = send_recv( key, data, count, block, size, rank, exp, bias, bias_exp );
         if( ret == 0 ) break;
-		else printf("reture value:%d\n", ret);
     }
     //log_print( "<%d     %d\n", counter++, count);
     //printf( "<%d     %d     %d    %d\n", counter++, count, size, rank);
@@ -421,7 +429,7 @@ int block_sum(int key, const float *input, float *output, int count, int block, 
     
     short bias_out = bias_x;
 	block_int_sum(key, tmp, count, block, size, rank, &exp, &bias_out, &bias_exp);
-    //printf( "exp = %d    bias_out = %d  bias_exp = %d\n", exp, bias_out, bias_exp);
+    printf( "exp = %d    bias_out = %d  bias_exp = %d\n", exp, bias_out, bias_exp);
 
 	for (int i = 0; i < count; ++i){
         tmp_x[i] = NTOH(tmp[i]);

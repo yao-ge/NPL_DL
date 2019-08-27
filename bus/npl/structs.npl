@@ -21,7 +21,7 @@
 
 struct packet_value_t {
 	fields {
-		bit[VALUE_BITS] value;
+		bit[VALUE_BITS] my_value;
 	}
 }
 
@@ -31,7 +31,14 @@ struct tmp_t {
 		bit[48] 		value_48;
 		bit[32] 		value_32;
 		bit[16] 		value_16;
+		bit[8]			value_8;
+		bit[16] 		set_drop;
 		bit[16] 		set_cast;
+		bit[16] 		set_upda;
+		bit[16] 		set_load_exp;
+		bit[16] 		set_load_bias;
+		bit[16] 		set_load_bias_exp;
+		bit[16] 		set_load_value;
 		bit[16] 		diff_exp;
 		bit[16] 		shift;
 		packet_value_t  values[BLOCK_COUNT];

@@ -65,7 +65,8 @@ parser_node ipv4 {
 
 parser_node udp {
 	extract_fields(ingress_pkt.l4_hdr.udp);
-	packet_info.job_id = ingress_pkt.l4_hdr.udp.job_id;
+	//packet_info.job_id = ingress_pkt.l4_hdr.udp.job_id;
+	packet_info.job_id = 0;
 	packet_info.max_worker = ingress_pkt.l4_hdr.udp.max_worker;
 	packet_info.worker_id = ingress_pkt.l4_hdr.udp.worker_id;
 	packet_info.sequence = ingress_pkt.l4_hdr.udp.sequence;
@@ -80,11 +81,41 @@ parser_node udp {
 
 parser_node payload {
 	extract_fields(ingress_pkt.payload.pss[0]);
-	if(1024 < ingress_pkt.l4_hdr.udp.length - 8) {
-		next_node payload1;
-	}else{
-		next_node ingress;
-	}
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8191:8184];
+	print("value:%d\n", tmp.value_8);
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8183:8176];
+	print("value:%d\n", tmp.value_8);
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8175:8168];
+	print("value:%d\n", tmp.value_8);
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8167:8160];
+	print("value:%d\n", tmp.value_8);
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8159:8152];
+	print("value:%d\n", tmp.value_8);
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8151:8144];
+	print("value:%d\n", tmp.value_8);
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8143:8136];
+	print("value:%d\n", tmp.value_8);
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8135:8128];
+	print("value:%d\n", tmp.value_8);
+	tmp.value_8 = ingress_pkt.payload.pss[0].values[8127:8120];
+	print("value:%d\n", tmp.value_8);
+	//tmp.value_8 = ingress_pkt.payload.pss[0].values[79:72];
+	//print("value:%d\n", tmp.value_8);
+	//tmp.value_8 = ingress_pkt.payload.pss[0].values[87:80];
+	//print("value:%d\n", tmp.value_8);
+	//tmp.value_8 = ingress_pkt.payload.pss[0].values[95:88];
+	//print("value:%d\n", tmp.value_8);
+	//tmp.value_8 = ingress_pkt.payload.pss[0].values[103:96];
+	//print("value:%d\n", tmp.value_8);
+	//tmp.value_8 = ingress_pkt.payload.pss[0].values[111:104];
+	//print("value:%d\n", tmp.value_8);
+	//tmp.value_8 = ingress_pkt.payload.pss[0].values[119:112];
+	//print("value:%d\n", tmp.value_8);
+	//tmp.value_8 = ingress_pkt.payload.pss[0].values[127:120];
+	//print("value:%d\n", tmp.value_8);
+	//tmp.value_8 = ingress_pkt.payload.pss[0].values[135:128];
+	//print("value:%d\n", tmp.value_8);
+	next_node payload1;
 }
 
 parser_node payload1 {
