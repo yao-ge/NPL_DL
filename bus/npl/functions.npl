@@ -79,7 +79,7 @@ function do_drop_action() {
 	print("do drop action\n");
 	tmp.value_1 = 1;
 	packet_drop(tmp.value_1, DROP_REASON__ZERO_SA, 0);
-	//egr_aux_bus.drop_vector = 1;
+	egr_aux_bus.drop_vector = 1;
 }
 
 function set_bcast() {
@@ -568,6 +568,8 @@ function do_egress_pkt_modify() {
 		egress_pkt.l2_hdr.l2 = ingress_pkt.l2_hdr.l2;
 		egress_pkt.l3_hdr.ipv4 = ingress_pkt.l3_hdr.ipv4;
 		egress_pkt.l4_hdr.udp = ingress_pkt.l4_hdr.udp;
+		//tmp.port_num = tmp.port_num - 1;
+		//obj_bus.port_num = tmp.port_num;
 		egress_pkt.payload = ingress_pkt.payload;
 		tmp.value_16 = ingress_pkt.l2_hdr.l2.ethertype;
 
@@ -663,7 +665,7 @@ function do_calculation() {
 			}
 			load_bits();
 			if(packet_info.worker_bits != packet_info.max_worker_bits){
-				set_drop_action();
+				set_drop_action();  // drop收进来的包
 			}else{
 				worker_count_set();
 				set_update_header();
@@ -675,4 +677,5 @@ function do_calculation() {
 			}
 		}
 	}
+	//tmp.port_num = 2;
 }

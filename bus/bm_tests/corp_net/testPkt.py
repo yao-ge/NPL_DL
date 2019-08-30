@@ -33,7 +33,7 @@ def get_tx_ip_packet(test_num):
     pkt[IP].src = sip
     pkt[IP].ihl = ihl
     #pkt[TCP].dataofs = dataofs
-    pkt[Raw].load = "This packet is being sent by test {} from CLI to BM".format(test_num) * 100
+    pkt[Raw].load = "This packet is being sent by test {} from CLI to BM".format(test_num)
     return pkt
 
 if __name__ == '__main__':

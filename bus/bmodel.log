@@ -12,12 +12,12 @@ Looking up sfc_mmu_profile
 ##### Starting Egress Pipeline Processing #####
 Looking up sfc_mmu_profile
 Looking up sfc_edb_profile
-Egress Packet, port(0), len(2104):
+Egress Packet, port(0), len(2104) DROPPED:
 
 Receiving packet from BM
-Dst Port = 0
-Dst Modid = 0
-bmi_tx_pkt, itm (0x1), etm(0x40)
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x1), etm(0x19)
 *************** Transmit Packet to Port ***************
 Sending packet into BM (Src Port = 0)
 Ingress Packet, port(0), len(2104)
@@ -33,7 +33,23 @@ Egress Packet, port(0), len(2104):
 Receiving packet from BM
 Dst Port = 0
 Dst Modid = 0
-bmi_tx_pkt, itm (0x2), etm(0x41)
+bmi_tx_pkt, itm (0x2), etm(0x1a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x3), etm(0x1b)
 *************** Transmit Packet to Port ***************
 Sending packet into BM (Src Port = 0)
 Ingress Packet, port(0), len(2104)
@@ -49,7 +65,5479 @@ Egress Packet, port(0), len(2104):
 Receiving packet from BM
 Dst Port = 0
 Dst Modid = 0
-bmi_tx_pkt, itm (0x3), etm(0x42)
+bmi_tx_pkt, itm (0x4), etm(0x1c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x5), etm(0x41)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x6), etm(0x42)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x7), etm(0x43)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x8), etm(0x44)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x9), etm(0x6a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xa), etm(0x6b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xb), etm(0x6c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xc), etm(0x6d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xd), etm(0x25)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xe), etm(0x26)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xf), etm(0x27)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x10), etm(0x28)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x11), etm(0x3f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x12), etm(0x40)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x13), etm(0x41)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x14), etm(0x42)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x15), etm(0x2a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x16), etm(0x2b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x17), etm(0x2c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x18), etm(0x2d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x19), etm(0x66)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x1a), etm(0x67)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x1b), etm(0x68)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x1c), etm(0x69)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x1d), etm(0x26)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x1e), etm(0x27)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x1f), etm(0x28)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x20), etm(0x29)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x21), etm(0x6e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x22), etm(0x6f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x23), etm(0x70)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x24), etm(0x71)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x25), etm(0x54)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x26), etm(0x55)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x27), etm(0x56)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x28), etm(0x57)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x29), etm(0x7c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x2a), etm(0x7d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x2b), etm(0x7e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x2c), etm(0x84)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x2d), etm(0x85)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x2e), etm(0x86)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x2f), etm(0x59)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x30), etm(0x5a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x31), etm(0x5b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x32), etm(0x89)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x33), etm(0x8a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x34), etm(0x8b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x35), etm(0x86)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x36), etm(0x87)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x37), etm(0x88)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x38), etm(0x69)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x39), etm(0x6a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x3a), etm(0x6b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x3b), etm(0x64)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x3c), etm(0x65)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x3d), etm(0x66)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x3e), etm(0x67)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x3f), etm(0x58)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x40), etm(0x59)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x41), etm(0x5a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x42), etm(0x5b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x43), etm(0x7a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x44), etm(0x7b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x45), etm(0x7c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x46), etm(0x7d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x47), etm(0x9c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x48), etm(0x9d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x49), etm(0x9e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x4a), etm(0x9f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x4b), etm(0x62)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x4c), etm(0x63)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x4d), etm(0x8e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x4e), etm(0x8f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x4f), etm(0x90)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x50), etm(0x91)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x51), etm(0xb1)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x52), etm(0xb2)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x53), etm(0xb3)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x54), etm(0xb4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x55), etm(0x86)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x56), etm(0x87)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x57), etm(0x88)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x58), etm(0x89)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x59), etm(0x9c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x5a), etm(0x9d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x5b), etm(0x9e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x5c), etm(0x9f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x5d), etm(0x70)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x5e), etm(0x71)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x5f), etm(0x72)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x60), etm(0x73)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x61), etm(0x92)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x62), etm(0x93)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x63), etm(0x94)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x64), etm(0x95)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x65), etm(0x9d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x66), etm(0x9e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x67), etm(0x9f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x68), etm(0xa0)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x69), etm(0xb5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x6a), etm(0xb6)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x6b), etm(0xb7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x6c), etm(0xb8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x6d), etm(0x7e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x6e), etm(0x7f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x6f), etm(0x80)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x70), etm(0x81)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x71), etm(0x72)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x72), etm(0x73)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x73), etm(0x74)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x74), etm(0x75)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x75), etm(0x98)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x76), etm(0x99)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x77), etm(0x9a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x78), etm(0x9b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x79), etm(0xb4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x7a), etm(0xb5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x7b), etm(0xb6)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x7c), etm(0xb7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x7d), etm(0x82)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x7e), etm(0x83)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x7f), etm(0x96)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x80), etm(0x97)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x81), etm(0x98)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x82), etm(0x99)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x83), etm(0xa8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x84), etm(0xa9)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x85), etm(0xaa)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x86), etm(0xab)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x87), etm(0xe8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x88), etm(0xe9)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x89), etm(0xea)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x8a), etm(0xeb)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x8b), etm(0xdc)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x8c), etm(0xdd)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x8d), etm(0xde)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x8e), etm(0xdf)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x8f), etm(0xea)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x90), etm(0xeb)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x91), etm(0xec)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x92), etm(0xed)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x93), etm(0xd9)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x94), etm(0xda)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x95), etm(0xdb)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x96), etm(0xdc)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x97), etm(0xd5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x98), etm(0xd6)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x99), etm(0xd7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x9a), etm(0xd8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x9b), etm(0xf7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x9c), etm(0xf8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x9d), etm(0xf9)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x9e), etm(0xfa)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x9f), etm(0xc7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xa0), etm(0xc8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xa1), etm(0xc9)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xa2), etm(0xca)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xa3), etm(0xd2)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xa4), etm(0xd3)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xa5), etm(0xd4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xa6), etm(0xd5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xa7), etm(0x108)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xa8), etm(0x109)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xa9), etm(0x10a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xaa), etm(0xe5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xab), etm(0xe6)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xac), etm(0xe7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xad), etm(0xe8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xae), etm(0x101)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xaf), etm(0x102)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xb0), etm(0xd5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xb1), etm(0xd6)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xb2), etm(0xd7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xb3), etm(0xd8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xb4), etm(0xe4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xb5), etm(0xe5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xb6), etm(0xe6)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xb7), etm(0xe7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xb8), etm(0xfd)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xb9), etm(0xfe)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xba), etm(0xff)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xbb), etm(0x100)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xbc), etm(0x118)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xbd), etm(0x119)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xbe), etm(0x11a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xbf), etm(0x11b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xc0), etm(0xf3)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xc1), etm(0xf4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xc2), etm(0xf5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xc3), etm(0xf6)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xc4), etm(0x120)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xc5), etm(0x121)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xc6), etm(0x122)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xc7), etm(0x123)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xc8), etm(0xe8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xc9), etm(0xe9)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xca), etm(0xea)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xcb), etm(0xeb)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xcc), etm(0xfd)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xcd), etm(0xfe)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xce), etm(0xff)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xcf), etm(0x100)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xd0), etm(0xea)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xd1), etm(0xeb)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xd2), etm(0xec)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xd3), etm(0xed)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xd4), etm(0xf1)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xd5), etm(0xf2)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xd6), etm(0xf3)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xd7), etm(0xf4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xd8), etm(0x136)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xd9), etm(0x137)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xda), etm(0x138)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xdb), etm(0x139)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xdc), etm(0xf1)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xdd), etm(0xf2)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xde), etm(0xf3)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xdf), etm(0xf4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xe0), etm(0x11e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xe1), etm(0x11f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xe2), etm(0x120)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xe3), etm(0x121)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xe4), etm(0xf4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xe5), etm(0xf5)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xe6), etm(0xf6)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xe7), etm(0xf7)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xe8), etm(0x11d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xe9), etm(0x11e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xea), etm(0x11f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xeb), etm(0x120)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xec), etm(0x10c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xed), etm(0x10d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xee), etm(0x10e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xef), etm(0x10f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xf0), etm(0x104)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xf1), etm(0x105)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xf2), etm(0x106)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xf3), etm(0x107)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xf4), etm(0x10a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xf5), etm(0x10b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xf6), etm(0x10c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xf7), etm(0x10d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xf8), etm(0x12b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xf9), etm(0x12c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xfa), etm(0x12d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xfb), etm(0x12e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xfc), etm(0x124)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xfd), etm(0x125)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0xfe), etm(0x126)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0xff), etm(0x127)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x100), etm(0x130)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x101), etm(0x131)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x102), etm(0x132)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x103), etm(0x133)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x104), etm(0x130)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x105), etm(0x131)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x106), etm(0x132)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x107), etm(0x133)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x108), etm(0x154)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x109), etm(0x155)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x10a), etm(0x156)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x10b), etm(0x157)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x10c), etm(0x15f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x10d), etm(0x160)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x10e), etm(0x161)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x10f), etm(0x162)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x110), etm(0x13a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x111), etm(0x13b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x112), etm(0x13c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x113), etm(0x13d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x114), etm(0x115)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x115), etm(0x116)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x116), etm(0x117)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x117), etm(0x118)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x118), etm(0x145)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x119), etm(0x146)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x11a), etm(0x147)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x11b), etm(0x148)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x11c), etm(0x133)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x11d), etm(0x134)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x11e), etm(0x135)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x11f), etm(0x136)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x120), etm(0x178)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x121), etm(0x179)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x122), etm(0x17a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x123), etm(0x17b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x124), etm(0x12b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x125), etm(0x12c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x126), etm(0x12d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x127), etm(0x12e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x128), etm(0x129)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x129), etm(0x12a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x12a), etm(0x12b)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x12b), etm(0x12c)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x12c), etm(0x154)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x12d), etm(0x155)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x12e), etm(0x156)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x12f), etm(0x157)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x130), etm(0x163)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x131), etm(0x164)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x132), etm(0x165)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x133), etm(0x166)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x134), etm(0x187)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x135), etm(0x188)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x136), etm(0x189)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x137), etm(0x18a)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x138), etm(0x195)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x139), etm(0x196)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x13a), etm(0x197)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x13b), etm(0x198)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x13c), etm(0x13d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x13d), etm(0x13e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x13e), etm(0x13f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x13f), etm(0x140)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x140), etm(0x1a1)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x141), etm(0x1a2)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x142), etm(0x1a3)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x143), etm(0x1a4)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x144), etm(0x14e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x145), etm(0x14f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x146), etm(0x150)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x147), etm(0x151)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x148), etm(0x1a8)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x149), etm(0x1a9)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x14a), etm(0x1aa)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x14b), etm(0x1ab)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x14c), etm(0x152)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x14d), etm(0x153)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x14e), etm(0x154)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x14f), etm(0x155)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x150), etm(0x154)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x151), etm(0x155)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x152), etm(0x156)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x153), etm(0x157)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x154), etm(0x15e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x155), etm(0x15f)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x156), etm(0x160)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x157), etm(0x161)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x158), etm(0x19d)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104):
+
+Receiving packet from BM
+Dst Port = 0
+Dst Modid = 0
+bmi_tx_pkt, itm (0x159), etm(0x19e)
+*************** Transmit Packet to Port ***************
+Sending packet into BM (Src Port = 0)
+Ingress Packet, port(0), len(2104)
+bm_debug_lvl = 4
+###### Starting Ingress Pipeline Processing ######
+Looking up sfc_iarb_profile
+Looking up sfc_mmu_profile
+##### Starting Egress Pipeline Processing #####
+Looking up sfc_mmu_profile
+Looking up sfc_edb_profile
+Egress Packet, port(0), len(2104) DROPPED:
+
+Receiving packet from BM
+EDB Dropped Packet
+Drop Vector = 1
+bmi_tx_pkt, itm (0x15a), etm(0x19f)
 *************** Transmit Packet to Port ***************
 Sending packet into BM (Src Port = 0)
 Ingress Packet, port(0), len(2104)

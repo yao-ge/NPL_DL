@@ -14,6 +14,8 @@
 #include <float.h>
 #include <python3.5m/Python.h>
 
+#include "fifo_cs.h"
+
 
 #define __USE_GNU       //..CPU_ZERO.....
 //#define _GNU_SOURCE
@@ -255,6 +257,7 @@ void socket_close()
 int send_recv(int key, data_t *data, int count, int block, int size, int rank, short *exp, short *bias, short *bias_exp)
 {
 //	printf("This is a UDP client\n");
+	int ret = 0;
 	char buff[BUF_SIZE] = {0};
 	int len = sizeof(sock_addr);
 	int pkt_len = 0;
@@ -276,15 +279,15 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 		//printf("before memcpy:\n");
 		//print_chars(buff, 128);
 		memcpy( buff+ pkt_len, (char*)data, data_len );
-		printf("send print data:\n");
-		print_chars((char*)data, data_len);
+		//printf("send print data:\n");
+		//print_chars((char*)data, data_len);
 		//printf("after memcpy:\n");
 		//print_chars(buff, 128);
 	}
 	block_len += pkt_len;
 
-    printf("sent block len:%d, data len:%d\n", block_len, data_len);
-    print_chars(buff, 128);
+    //printf("sent block len:%d, data len:%d\n", block_len, data_len);
+    //print_chars(buff, 128);
     //int n = sendto(sock, buff, block_len, 0, (struct sockaddr *)&sock_addr, sizeof(sock_addr));
 	n = send(sock, buff, block_len, 0);
 	if (n < 0)
@@ -301,8 +304,23 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 	if(n <= 0)
 		return -1;
 
-    //printf("recv block len:%d\n", n);
-    //print_chars(buff, 128);
+#if 1
+	if(buff[28] == 0x01){
+		//printf("before write to fifo\n");
+		ret = fifo_write(buff, n);
+		//print_chars(buff, 128);
+		//printf("write data to fifo\n");
+	}else{
+		//printf("before read from fifo\n");
+		memset(buff, 0x00, BUF_SIZE);
+		ret = fifo_read(buff, &n);
+		//print_chars(buff, 128);
+		//printf("read data from fifo\n");
+	}
+#else
+	printf("recv block len:%d\n", n);
+	print_chars(buff, 128);
+#endif
 	if (n>0 && data_len != 0)
 	{
 		//buff[n] = 0;
@@ -316,8 +334,8 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 	    memcpy( (char*)&v, buff+ pkt_len + 2 + 12, 2 );
         *bias_exp = ntohs(v);
 	    memcpy( (char*)data, buff+ pkt_len + 2 + 14, data_len );
-		printf("recv print data:\n");
-		print_chars((char*)data, data_len);
+		//printf("recv print data:\n");
+		//print_chars((char*)data, data_len);
 	}
 	else if (n==0)
 	{
