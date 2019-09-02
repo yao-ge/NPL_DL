@@ -9,10 +9,13 @@
 #include<sys/sem.h>  // semaphore
 #include<sys/msg.h>  // message queue
 #include<string.h>   // memcpy
+#include<unistd.h>
 
 //int fifo_server(char *data, int *data_len);
 //
 //int fifo_client(char *data, int data_len);
-int fifo_read(char *data, int *data_len);
+int fifo_read(char *data, int data_len, int key_lable);
 
-int fifo_write(char *data, int data_len);
+int fifo_write(char *data, int data_len, int key_lable);
+
+int fifo_reset();

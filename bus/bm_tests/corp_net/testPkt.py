@@ -40,7 +40,7 @@ if __name__ == '__main__':
     bmintf = BMRpcIntf("10.32.105.222")
     port = [0]
 
-    numpkts = 1
+    numpkts = 10000
     for count  in range(numpkts):
         for i in port:
             if (count == 0):

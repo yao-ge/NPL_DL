@@ -42,6 +42,7 @@ struct tmp_t {
 		bit[16] 		set_load_value;
 		bit[16] 		diff_exp;
 		bit[16] 		shift;
+		bit[16]         mid_param;
 		packet_value_t  values[BLOCK_COUNT];
 	}
 }

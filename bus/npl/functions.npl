@@ -142,7 +142,7 @@ function worker_count_sub() {
 	print("worker count sub\n");
 	index.value_32 = WORKER_COUNT_ADDR;
 	DATA_READ(index.value_32, ps_worker_count.value, tmp.value_16)
-	tmp.value_16 = tmp.value_16 - 1;
+	tmp.value_16 = tmp.value_16 - 2;
 	packet_info.worker_count = tmp.value_16;
 	DATA_WRITE(index.value_32, tmp.value_16, ps_worker_count.value)
 }
@@ -202,7 +202,7 @@ function set_bits() {
 
 function reset_bits() {
 	print("reset bits\n");
-	index.value_32 = WORKER_BITS_RESET_ADDR;
+	index.value_32 = WORKER_BITS_ADDR;
 	DATA_WRITE(index.value_32, 0, ps_worker_bits.value)
 }
 
@@ -244,7 +244,9 @@ function save_first_exp() {
 function save_exp() {
 	index.value_32 = BLOCK_ADDR;
 	DATA_READ(index.value_32, ps_exp.value, tmp.value_16)
-    if(tmp.value_16 >= ingress_pkt.l4_hdr.udp.exp){
+    if(((tmp.value_16 >= ingress_pkt.l4_hdr.udp.exp) && \
+				(tmp.value_16[15:15] == ingress_pkt.l4_hdr.udp.exp[15:15])) || \
+				((tmp.value_16[15:15] == 0) && (ingress_pkt.l4_hdr.udp.exp[15:15] == 1))){
 		tmp.value_16 = ingress_pkt.l4_hdr.udp.exp;
 	}
 	DATA_WRITE(index.value_32, tmp.value_16, ps_exp.value)
@@ -283,7 +285,9 @@ function save_first_bias_exp() {
 function save_bias_exp() {
 	index.value_32 = BLOCK_ADDR;
 	DATA_READ(index.value_32, ps_bias_exp.value, tmp.value_16)
-	if(tmp.value_16 > ingress_pkt.l4_hdr.udp.bias_exp){
+	if(((tmp.value_16 > ingress_pkt.l4_hdr.udp.bias_exp) && \
+				(tmp.value_16[15:15] == ingress_pkt.l4_hdr.udp.bias_exp[15:15])) || \
+				((tmp.value_16[15:15] == 0) && (ingress_pkt.l4_hdr.udp.bias_exp[15:15] == 1))){
 		tmp.value_16 = ingress_pkt.l4_hdr.udp.bias_exp;
 	}
 	DATA_WRITE(index.value_32, tmp.value_16, ps_bias_exp.value)
@@ -318,7 +322,10 @@ function save_bias() {
 	read_bias_exp();
 	DATA_READ(index.value_32, ps_bias.value, tmp.value_16)
 	print("tmp value:%d\t", tmp.value_16);
-	if(packet_info.bias_exp >= ingress_pkt.l4_hdr.udp.bias_exp){
+	if(((packet_info.bias_exp >= ingress_pkt.l4_hdr.udp.bias_exp) && \
+				(packet_info.bias_exp[15:15] == ingress_pkt.l4_hdr.udp.bias_exp[15:15])) || \
+			((packet_info.bias_exp[15:15] == 0) && \
+			 (ingress_pkt.l4_hdr.udp.bias_exp[15:15] == 1))){
 		tmp.shift = packet_info.bias_exp - ingress_pkt.l4_hdr.udp.bias_exp;
 	}else{
 		tmp.shift = ingress_pkt.l4_hdr.udp.bias_exp - packet_info.bias_exp;
@@ -327,16 +334,36 @@ function save_bias() {
 	if(0 == tmp.shift){
 		tmp.value_16 = tmp.value_16 + ingress_pkt.l4_hdr.udp.bias;
 	}else{
-		if(packet_info.bias_exp >= ingress_pkt.l4_hdr.udp.bias_exp){
-			tmp.value_16 = tmp.value_16 >> tmp.shift + ingress_pkt.l4_hdr.udp.bias;
+		if(((packet_info.bias_exp >= ingress_pkt.l4_hdr.udp.bias_exp) && \
+					(packet_info.bias_exp[15:15] == ingress_pkt.l4_hdr.udp.bias_exp[15:15])) || \
+				((packet_info.bias_exp[15:15] == 0) \
+				 && (ingress_pkt.l4_hdr.udp.bias_exp[15:15] == 1))){
+			if(1 == tmp.value_16[15:15]){
+				tmp.value_16 = 65535 - tmp.value_16;
+				tmp.value_16 = ingress_pkt.l4_hdr.udp.bias - (tmp.value_16 >> tmp.shift);
+			}else{
+				tmp.value_16 = (tmp.value_16 >> tmp.shift) + ingress_pkt.l4_hdr.udp.bias;
+			}
 		}else{
-			tmp.value_16 = tmp.value_16 + ingress_pkt.l4_hdr.udp.bias >> tmp.shift;
+			if(1 == ingress_pkt.l4_hdr.udp.bias[15:15]){
+				tmp.mid_param = ingress_pkt.l4_hdr.udp.bias;
+				tmp.mid_param = 65535 - tmp.mid_param;
+				tmp.value_16 = tmp.value_16 - (tmp.mid_param >> tmp.shift);
+			}else{
+				tmp.value_16 = tmp.value_16 + (ingress_pkt.l4_hdr.udp.bias >> tmp.shift);
+			}
 		}
 	}
 
+	tmp.value_16 = tmp.value_16 - 1;
 	DATA_WRITE(index.value_32, tmp.value_16, ps_bias.value)
 	print("tm shift:%d\t", tmp.shift);
 	print("save bias:%d\n", tmp.value_16);
+
+	//tmp.set_drop = 1;
+	//tmp.set_cast = 65534;
+	//tmp.set_upda = tmp.set_drop - tmp.set_cast;
+	//print("minus:%d\n", tmp.set_upda);
 }
 
 function reset_bias() {
@@ -415,13 +442,16 @@ function save_value() {
 	print("save_value\t");
 	index.value_32 = BLOCK_ADDR;
 	print("index:%d\t", index.value_32);
-	if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+	if((packet_info.exp > ingress_pkt.l4_hdr.udp.exp) || \
+			((packet_info.exp[15:15] == 0) && (ingress_pkt.l4_hdr.udp.exp[15:15] == 1))){
 		tmp.shift = packet_info.exp - ingress_pkt.l4_hdr.udp.exp;
 	}else{
 		tmp.shift = ingress_pkt.l4_hdr.udp.exp - packet_info.exp;
 	}
 
-	CALC_MASKS(tmp.shift)
+	print("tmp shift:%d\n", tmp.shift);
+	tmp.mid_param = tmp.shift;
+	CALC_MASKS(tmp.mid_param)
 	print("tmp shift:%d\n", tmp.shift);
 	if(0x00 == index.value_32){
 		if(0 == tmp.shift){
@@ -430,7 +460,9 @@ function save_value() {
 		}else{
 			tmp.values[0].my_value = ps_value.value00;
 			tmp.values[1].my_value = ps_value.value01;
-			if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+			if(((packet_info.exp > ingress_pkt.l4_hdr.udp.exp) && \
+						(packet_info.exp[15:15] == ingress_pkt.l4_hdr.udp.exp[15:15])) || \
+					((packet_info.exp[15:15] == 0) && (ingress_pkt.l4_hdr.udp.exp[15:15] == 1))){
 				tmp.values[0].my_value = ((tmp.values[0].my_value >> tmp.shift) & packet_info.masks.my_value) \
 								   +  ingress_pkt.payload.pss[0].values;
 				tmp.values[1].my_value = ((tmp.values[1].my_value >> tmp.shift) & packet_info.masks.my_value) \
@@ -453,7 +485,9 @@ function save_value() {
 		}else{
 			tmp.values[0].my_value = ps_value.value10;
 			tmp.values[1].my_value = ps_value.value11;
-			if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+			if(((packet_info.exp > ingress_pkt.l4_hdr.udp.exp) && \
+						(packet_info.exp[15:15] == ingress_pkt.l4_hdr.udp.exp[15:15])) || \
+					(packet_info.exp[15:15] == 0) && (ingress_pkt.l4_hdr.udp.exp[15:15] == 1)){
 				tmp.values[0].my_value = ((tmp.values[0].my_value >> tmp.shift) & packet_info.masks.my_value) \
 								   +  ingress_pkt.payload.pss[0].values;
 				tmp.values[1].my_value = ((tmp.values[1].my_value >> tmp.shift) & packet_info.masks.my_value) \
@@ -476,7 +510,9 @@ function save_value() {
 		}else{
 			tmp.values[0].my_value = ps_value.value20;
 			tmp.values[1].my_value = ps_value.value21;
-			if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+			if(((packet_info.exp > ingress_pkt.l4_hdr.udp.exp) && \
+						(packet_info.exp[15:15] == ingress_pkt.l4_hdr.udp.exp[15:15])) || \
+					((packet_info.exp[15:15] == 0) && (ingress_pkt.l4_hdr.udp.exp[15:15] == 1))){
 				tmp.values[0].my_value = ((tmp.values[0].my_value >> tmp.shift) & packet_info.masks.my_value) \
 								   +  ingress_pkt.payload.pss[0].values;
 				tmp.values[1].my_value = ((tmp.values[1].my_value >> tmp.shift) & packet_info.masks.my_value) \
@@ -499,7 +535,9 @@ function save_value() {
 		}else{
 			tmp.values[0].my_value = ps_value.value30;
 			tmp.values[1].my_value = ps_value.value31;
-			if(packet_info.exp > ingress_pkt.l4_hdr.udp.exp){
+			if(((packet_info.exp > ingress_pkt.l4_hdr.udp.exp) && \
+						(packet_info.exp[15:15] == ingress_pkt.l4_hdr.udp.exp[15:15])) || \
+					((packet_info.exp[15:15] == 0) && (ingress_pkt.l4_hdr.udp.exp[15:15] == 1))){
 				tmp.values[0].my_value = ((tmp.values[0].my_value >> tmp.shift) & packet_info.masks.my_value) \
 								   +  ingress_pkt.payload.pss[0].values;
 				tmp.values[1].my_value = ((tmp.values[1].my_value >> tmp.shift) & packet_info.masks.my_value) \
@@ -553,7 +591,7 @@ function reset_according_sequence() {
 			set_drop_action();
 		}else {
 			reset_init_bits();
-			reset_all();
+			//reset_all();
 			set_update_header();
 			set_bcast();
 		}
@@ -638,42 +676,45 @@ function do_calculation() {
 
 	get_max_worker_bits();
 
-	load_bits();
-	if(packet_info.worker_bits == packet_info.max_worker_bits){
-		update_package();
-	}else if(60000 <= packet_info.sequence) {
+	if(60000 <= packet_info.sequence) {
 		reset_according_sequence();
 	}else{
-		if(0 == packet_info.worker_bits){
-			reset_info();
-		}
-		if((packet_info.worker_bits & (1 << packet_info.worker_id)) != 0){
-			set_drop_action();
+		load_bits();
+		if(packet_info.worker_bits == packet_info.max_worker_bits){
+			update_package();
 		}else{
-			set_bits();
-			read_exp();
-			if(0x7fff == packet_info.exp){
-				save_first_exp();
-				save_first_bias();
-				save_first_bias_exp();
-				save_first_value();
-			}else{
-				save_bias();
-				save_bias_exp();
-				save_exp();
-				save_value();
+			if(0 == packet_info.worker_bits){
+				reset_info();
 			}
-			load_bits();
-			if(packet_info.worker_bits != packet_info.max_worker_bits){
-				set_drop_action();  // drop收进来的包
+			if((packet_info.worker_bits & (1 << packet_info.worker_id)) != 0){
+				set_drop_action();
 			}else{
-				worker_count_set();
-				set_update_header();
-				set_load_exp();
-				set_load_bias();
-				set_load_bias_exp();
-				set_load_value();
-				set_bcast();
+				set_bits();
+				read_exp();
+				if(0x7fff == packet_info.exp){
+					save_first_exp();
+					save_first_bias();
+					save_first_bias_exp();
+					save_first_value();
+				}else{
+					save_bias();
+					save_bias_exp();
+					save_exp();
+					save_value();
+				}
+				load_bits();
+				if(packet_info.worker_bits != packet_info.max_worker_bits){
+					set_drop_action();  // drop收进来的包
+				}else{
+					worker_count_set();
+					set_update_header();
+					set_load_exp();
+					set_load_bias();
+					set_load_bias_exp();
+					set_load_value();
+					set_bcast();
+					reset_bits();
+				}
 			}
 		}
 	}

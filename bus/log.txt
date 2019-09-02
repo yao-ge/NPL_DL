@@ -1,0 +1,27 @@
+write data to fifo sequence:14, worker:1
+before read from fifo sequence:15, worker:0
+read data from fifo sequence:15, worker:0
+before write to fifo sequence:15, worker:1
+write data to fifo sequence:15, worker:1
+before read from fifo sequence:16, worker:0
+read data from fifo sequence:16, worker:0
+before write to fifo sequence:16, worker:1
+write data to fifo sequence:16, worker:1
+before read from fifo sequence:17, worker:0
+read data from fifo sequence:17, worker:0
+before write to fifo sequence:17, worker:1
+write data to fifo sequence:17, worker:1
+before read from fifo sequence:0, worker:0
+read data from fifo sequence:0, worker:0
+before read from fifo sequence:1, worker:0
+read data from fifo sequence:1, worker:0
+before read from fifo sequence:2, worker:0
+read data from fifo sequence:2, worker:0
+before read from fifo sequence:3, worker:0
+read data from fifo sequence:3, worker:0
+before read from fifo sequence:4, worker:0
+read data from fifo sequence:4, worker:0
+before read from fifo sequence:5, worker:0
+read data from fifo sequence:5, worker:0
+before read from fifo sequence:6, worker:0
+
