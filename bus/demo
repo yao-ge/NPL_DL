@@ -5,5 +5,5 @@
 #!/bin/bash
 
 cd ./bm_tests/corp_net/ps_bias-master/allreduce/
-./demo.sh 2
-#./run.sh 2 0
+#./demo.sh 2
+./run.sh 2 0

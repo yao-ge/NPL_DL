@@ -276,62 +276,65 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 			size, rank, block, *exp, *bias, *bias_exp);
 
 	if(0 < data_len){
-		//printf("before memcpy:\n");
-		//print_chars(buff, 128);
+		if(data_len > block_len)
+			data_len = block_len;
 		memcpy( buff+ pkt_len, (char*)data, data_len );
-		//printf("send print data:\n");
-		//print_chars((char*)data, data_len);
-		//printf("after memcpy:\n");
-		//print_chars(buff, 128);
 	}
 	block_len += pkt_len;
 
     //printf("sent block len:%d, data len:%d\n", block_len, data_len);
     //print_chars(buff, 128);
     //int n = sendto(sock, buff, block_len, 0, (struct sockaddr *)&sock_addr, sizeof(sock_addr));
+# if 1
 	n = send(sock, buff, block_len, 0);
 	if (n < 0)
 	{
 		perror("sendto");
 		printf("n:%d, sock:%d\n", n, sock);
-		exit(0);
 		//close(sock);
 		return -1;
 	}
 
 	//n = recvfrom(sock, buff, 65535, 0, (struct sockaddr *)&sock_addr,  (socklen_t*)&len);
 	n = recv(sock, buff, 65535, 0);
+#else 
+	n = 1;
+#endif
 
 	//printf("recv block len:%d\n", n);
 	//printf("sequence:%d, worker:%d\n", block, rank);
 	//print_chars(buff, 128);
-	if(-1 == block || 0 >= n){
-		*exp = 0;
-		*bias = 0;
-		*bias_exp = 0;
-		memset((char *)data, 0x00, data_len);
-		return 0;
+	//if(-1 == block || 0 >= n){
+	//	*exp = 0;
+	//	*bias = 0;
+	//	*bias_exp = 0;
+	//	memset((char *)data, 0x00, data_len);
+	//	return 0;
+	//}
+#if 0
+	if(0 < n){
+		int key_s = 0;
+		if(buff[28] == 0x01){
+			printf("before write to fifo sequence:%d, worker:%d\n", block, rank);
+			key_s = block % 4;
+			ret = fifo_write(buff, n, key_s);
+			//print_chars(buff, 128);
+			printf("write data to fifo sequence:%d, worker:%d\n", block, rank);
+		}else{
+			printf("before read from fifo sequence:%d, worker:%d\n", block, rank);
+			key_s = block % 4;
+			memset(buff, 0x00, BUF_SIZE);
+			ret = fifo_read(buff, n, key_s);
+			//print_chars(buff, 128);
+			printf("read data from fifo sequence:%d, worker:%d\n", block, rank);
+		}
 	}
-#if 1
-	int key_s = 0;
-	if(buff[28] == 0x01){
-		//printf("before write to fifo sequence:%d, worker:%d\n", block, rank);
-		key_s = block % 4;
-		ret = fifo_write(buff, n, key_s);
-		//print_chars(buff, 128);
-		//printf("write data to fifo sequence:%d, worker:%d\n", block, rank);
-	}else{
-		//printf("before read from fifo sequence:%d, worker:%d\n", block, rank);
-		key_s = block % 4;
-		memset(buff, 0x00, BUF_SIZE);
-		ret = fifo_read(buff, n, key_s);
-		//print_chars(buff, 128);
-		//printf("read data from fifo sequence:%d, worker:%d\n", block, rank);
-	}
-#endif
+#else
 	//printf("recv block len:%d\n", n);
 	//print_chars(buff, 128);
-	if (n>0 && data_len != 0)
+#endif
+
+	if (n>0 && data_len != 0 && n > data_len)
 	{
 		//buff[n] = 0;
 		//printf("received:");
@@ -355,7 +358,7 @@ int send_recv(int key, data_t *data, int count, int block, int size, int rank, s
 	}
 	else if (n == -1)
 	{
-		perror("recvfrom send");
+		//printf("recvfrom send worker:%d ,sequence:%d\n", rank, block);
 		//close(sock);
 		return -1;
 	}

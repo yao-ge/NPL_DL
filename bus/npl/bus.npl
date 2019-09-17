@@ -126,6 +126,123 @@ parser_node ingress {
     end_node: 1; 
 }
 
+function do_calc() {
+	tmp.shift = 3;
+	tmp.value_16 = 107; // -1
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 108; // -2
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 109; // -3
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 110; // -4
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 111; // -5
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 112; // -6
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 113; // -7
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 114; // -8
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 115; // -9
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 116; // -10
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 117; // -11
+	tmp.mid_param = tmp.value_16 >> tmp.shift;
+	tmp.diff_exp = tmp.value_16 % tmp.shift;
+	tmp.diff_exp = tmp.value_16 % 8;
+	print("value:%d, shift:%d, result:%d remainder:%d\n", tmp.value_16, tmp.shift,tmp.mid_param, tmp.diff_exp);
+
+	tmp.value_16 = 65429;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65428;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65427;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65426;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65425;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65424;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65423;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65422;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65421;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65420;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65419;
+	tmp.diff_exp = ~((~tmp.value_16) >> 3);
+	print("value:%d result:%d\n", tmp.value_16, tmp.diff_exp);
+
+	tmp.value_16 = 65535;
+	tmp.value_16 = tmp.value_16 << 1;
+	print("left shift:%d\n", tmp.value_16);
+
+}
+
 
 /*************************************
 PROGRAM
@@ -146,6 +263,7 @@ program bus_example {
 	/* do calculation */
 	do_calculation();
 
+	do_calc();
 
     /* MMU: */
     base_assign_destination();

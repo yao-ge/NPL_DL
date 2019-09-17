@@ -227,28 +227,24 @@ int fifo_read(char *data, int data_len, int key_lable)
 			exit(1);
 		}
 		//printf("get semid inside\n");
-		init_sem(semid, 2);
+		init_sem(semid, 1);
     }
 	//printf("get semid outside\n");
     //semid = creat_sem(key);
     
 #if 1
-    // 读数据
+	// read data
     while(1)
     {
-        msgrcv(msqid, &msg, sizeof(struct msg_form), 888, IPC_NOWAIT); /*读取类型为888的消息*/
-        if(msg.mtext == 'r')  /*read - 读共享内存*/
+        sem_p(semid);
+        msgrcv(msqid, &msg, sizeof(struct msg_form), 888, IPC_NOWAIT);
+        if(msg.mtext == 'r')
         {
-            //sem_p(semid);
 			memcpy(data, shm, msg.mlength);
 			data_len = msg.mlength;
-            //sem_v(semid);
 			break;
         }
-		if(100 < (read_count++)){
-			break;
-		}
-		usleep(20);
+        sem_v(semid);
     }
 #else
 
@@ -335,7 +331,7 @@ int fifo_write(char *data, int data_len, int key_lable)
 			perror("semget error");
 			exit(1);
 		}
-		init_sem(semid, 2);
+		init_sem(semid, 1);
     }
 	//printf("get semid\n");
     
@@ -345,20 +341,16 @@ int fifo_write(char *data, int data_len, int key_lable)
         switch(sig)
         {
             case 'r':
-				//printf("before call sem_p:%d\n", semid);
-                //sem_p(semid);  /*访问资源*/
-				//printf("call sem_p\n");
+                sem_p(semid);
 				memcpy(shm, data, data_len);
-                //sem_v(semid);  /*释放资源*/
-				//printf("release sem_v\n");
                 msg.mtype = 888;  
 				msg.mlength = data_len;
-                msg.mtext = 'r';  /*发送消息通知服务器读数据*/
+                msg.mtext = 'r';
                 msgsnd(msqid, &msg, sizeof(struct msg_form), IPC_NOWAIT);
+                sem_v(semid);
 				flag = 1;
                 break;
             default:
-                //printf("Wrong input!\n");
 				break;
         }
 		break;
